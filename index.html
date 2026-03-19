@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         :root {
             /* YENİ: Premium Koyu Lacivert Arka Plan */
@@ -109,6 +112,7 @@
         .modal-content p { color: var(--text-secondary); margin-bottom: 15px; line-height: 1.6; }
         .modal-tags { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;}
         .modal-tags span { background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; color: var(--primary-rgb); border: 1px solid rgba(0,242,254,0.3); }
+        
         /* Edu.X Roadmap (Yol Haritası) */
         #roadmap { position: relative; padding: 100px 20px; }
         .timeline { position: relative; max-width: 800px; margin: 0 auto; }
@@ -140,6 +144,7 @@
             .timeline-item.left::after, .timeline-item.right::after { left: 21px; }
             .timeline-item.right { left: 0%; }
         }
+
         /* Canlı GitHub İstatistikleri */
         #github-stats { padding: 80px 20px; text-align: center; }
         .github-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
@@ -149,6 +154,7 @@
         .gh-card:hover { transform: translateY(-5px); border-color: transparent; }
         .gh-card:hover::before { opacity: 1; filter: blur(10px); }
         .gh-card img { max-width: 100%; height: auto; border-radius: 10px; position: relative; z-index: 1; }
+        
         /* Edu.X Özel Erişim Formu (Newsletter) */
         #newsletter { padding: 80px 20px; text-align: center; background: linear-gradient(0deg, var(--card-bg) 0%, var(--bg-color) 100%); border-top: 1px solid rgba(255,255,255,0.02); }
         .nl-container { max-width: 600px; margin: 0 auto; }
@@ -163,45 +169,34 @@
         
         .nl-btn { padding: 15px 40px; border-radius: 50px; border: none; background: linear-gradient(90deg, var(--primary-rgb), var(--secondary-rgb)); color: white; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
         .nl-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--secondary-rgb); }    
+        
         /* Footer */
         footer { background: var(--card-bg); padding: 50px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
         .footer-content h2 { font-size: 2rem; margin-bottom: 10px; }
         .footer-content p { color: var(--text-secondary); margin-bottom: 30px; font-size: 0.9rem; }
         .footer-content a { text-decoration: none; color: white; font-weight: 700; font-size: 1.1rem; transition: 0.3s; font-family: 'Unbounded', sans-serif;}
         .footer-content a:hover { color: var(--secondary-rgb); text-shadow: 0 0 10px var(--secondary-rgb); }
+        
         /* =========================================
            MOBİL UYUM (RESPONSIVE) - VİZYONER SÜRÜM
            ========================================= */
         @media screen and (max-width: 768px) {
-            /* 1. Menü ve Header: Alt alta ve ortalı */
             nav { flex-direction: column; gap: 15px; padding: 15px; }
             .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
             .logo-bottom { font-size: 1.5rem; }
-            
-            /* 2. Hero (Giriş): Devasa yazıları ekrana sığdır */
             #hero { padding: 10px; }
             .hero-content h1 { font-size: 2.8rem; letter-spacing: 0; line-height: 1.2; margin-bottom: 20px;}
             .hero-content h2 { font-size: 1rem; line-height: 1.5; }
-            
-            /* 3. Bölümlerin Genel Boşlukları */
             section { padding: 60px 20px; }
             .section-title { font-size: 1.8rem; margin-bottom: 40px; }
-            
-            /* 4. Vizyon (Hakkımda): Yan yana duranları alt alta al */
             #hakkimda { flex-direction: column; text-align: center; }
             .about-text { max-width: 100%; }
             .section-title.rgb-text[style] { text-align: center !important; }
             .features { grid-template-columns: 1fr; width: 100%; }
-            
-            /* 5. GitHub Kartları: Ekrana tam otursun */
             .github-container { gap: 15px; }
             .gh-card { width: 100%; padding: 15px; }
-            
-            /* 6. Bülten Formu: Baş parmakla basmaya uygun tam genişlik */
             .nl-form { flex-direction: column; width: 100%; }
             .nl-input, .nl-btn { width: 100%; border-radius: 15px; }
-            
-            /* 7. Modal (Açılır Pencere): Telefonda taşmasın */
             .modal-content { width: 95%; padding: 25px; margin-top: 50px; }
             .modal-content h2 { font-size: 1.5rem; }
         }
@@ -222,10 +217,10 @@
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
             <div class="lang-toggle" style="display: inline-block; margin-left: 20px; font-weight: 600; font-family: 'Poppins', sans-serif;">
-    <a href="index.html" style="color: #00f2fe; text-decoration: none; text-shadow: 0 0 5px #00f2fe;">TR</a> 
-    <span style="color: #4a5568; margin: 0 5px;">|</span> 
-    <a href="en.html" style="color: #8a9aaa; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#e145f1'" onmouseout="this.style.color='#8a9aaa'">EN</a>
-</div>
+                <a href="index.html" style="color: #00f2fe; text-decoration: none; text-shadow: 0 0 5px #00f2fe;">TR</a> 
+                <span style="color: #4a5568; margin: 0 5px;">|</span> 
+                <a href="en.html" style="color: #8a9aaa; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#e145f1'" onmouseout="this.style.color='#8a9aaa'">EN</a>
+            </div>
         </nav>
     </header>
 
@@ -245,29 +240,29 @@
     </section>
 
     <section id="hakkimda">
-        <div class="about-text">
+        <div class="about-text" data-aos="fade-right">
             <h2 class="section-title rgb-text" style="text-align:left; left: 0; transform: none; margin-bottom:40px;">Vizyon</h2>
             <p>Geleceğin teknolojilerini kodlayan bir <strong>Yazılım Mühendisliği</strong> öğrencisiyim. Geleneksel yöntemleri modern kodlama disiplinleriyle harmanlıyor, imparatorluğumu dijital dünyada inşa ediyorum.</p>
             <p><strong>Edu.X</strong> gibi devasa projelerin mimarı olarak, sadece kod yazmıyorum; kullanıcı deneyimini zirveye taşıyacak çözümler üretiyorum.</p>
         </div>
         <div class="features">
-            <div class="feat-card"><h3>Girişimcilik</h3><p>Edu.X'in kurucusu olarak pazar analizi ve ürün geliştirme.</p></div>
-            <div class="feat-card"><h3>Backend & Algoritma</h3><p>C++ ile güçlü mantık, Python ile dinamik çözümler.</p></div>
-            <div class="feat-card"><h3>Frontend</h3><p>HTML, CSS, JS ile modern ve akıcı UX tasarımı.</p></div>
-            <div class="feat-card"><h3>Vizyoner</h3><p>Geleceği öngören teknolojik çözümler.</p></div>
+            <div class="feat-card" data-aos="fade-up" data-aos-delay="100"><h3>Girişimcilik</h3><p>Edu.X'in kurucusu olarak pazar analizi ve ürün geliştirme.</p></div>
+            <div class="feat-card" data-aos="fade-up" data-aos-delay="200"><h3>Backend & Algoritma</h3><p>C++ ile güçlü mantık, Python ile dinamik çözümler.</p></div>
+            <div class="feat-card" data-aos="fade-up" data-aos-delay="300"><h3>Frontend</h3><p>HTML, CSS, JS ile modern ve akıcı UX tasarımı.</p></div>
+            <div class="feat-card" data-aos="fade-up" data-aos-delay="400"><h3>Vizyoner</h3><p>Geleceği öngören teknolojik çözümler.</p></div>
         </div>
     </section>
 
     <section id="projeler">
-        <h2 class="section-title rgb-text">Projeler İmparatorluğu</h2>
+        <h2 class="section-title rgb-text" data-aos="fade-up">Projeler İmparatorluğu</h2>
         <div class="projects-grid">
-            <div class="proj-card" onclick="openModal('eduxModal')">
+            <div class="proj-card" onclick="openModal('eduxModal')" data-aos="zoom-in-up" data-aos-delay="100">
                 <span class="proj-status">Geliştiriliyor</span>
                 <h3>Edu.X</h3>
                 <p>Eğitim dünyasını dijitalleştiren, kullanıcı dostu arabirimi ve güçlü altyapısı ile modern bir platform vizyonu.</p>
                 <div class="proj-links"><span class="rgb-text">Detayları Gör ➔</span></div>
             </div>
-            <div class="proj-card">
+            <div class="proj-card" data-aos="zoom-in-up" data-aos-delay="200">
                 <span class="proj-status" style="color:#b3c2d1; border-color:#b3c2d1;">Canlıda</span>
                 <h3>onurcakal.com</h3>
                 <p>Kişisel markamı ve vizyonumu dünyaya açan, SEO uyumlu ve premium lacivert temalı portfolyo ekosistemi.</p>
@@ -275,11 +270,12 @@
             </div>
         </div>
     </section>
+    
     <section id="roadmap">
-        <h2 class="section-title rgb-text">Edu.X Yol Haritası</h2>
+        <h2 class="section-title rgb-text" data-aos="fade-up">Edu.X Yol Haritası</h2>
         <div class="timeline">
             
-            <div class="timeline-item left">
+            <div class="timeline-item left" data-aos="fade-right" data-aos-delay="100">
                 <div class="timeline-content">
                     <span class="timeline-date">Q4 2025</span>
                     <h3>Vizyon ve Mimari</h3>
@@ -287,7 +283,7 @@
                 </div>
             </div>
 
-            <div class="timeline-item right">
+            <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
                 <div class="timeline-content">
                     <span class="timeline-date">Q1 2026 (Şu An)</span>
                     <h3>Prototip ve UI/UX</h3>
@@ -295,7 +291,7 @@
                 </div>
             </div>
 
-            <div class="timeline-item left">
+            <div class="timeline-item left" data-aos="fade-right" data-aos-delay="300">
                 <div class="timeline-content">
                     <span class="timeline-date">Q3 2026</span>
                     <h3>Backend Entegrasyonu ve Kapalı Beta</h3>
@@ -303,7 +299,7 @@
                 </div>
             </div>
 
-            <div class="timeline-item right">
+            <div class="timeline-item right" data-aos="fade-left" data-aos-delay="400">
                 <div class="timeline-content">
                     <span class="timeline-date">Q1 2027</span>
                     <h3>Resmi Lansman & Ölçeklenme</h3>
@@ -312,24 +308,25 @@
             </div>
 
         </div>
-        
     </section>
+
     <section id="github-stats">
-        <h2 class="section-title rgb-text">Kodlama Disiplini</h2>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Bir vizyoner sadece plan yapmaz, her gün üretir. Edu.X ve diğer projelerimdeki canlı geliştirme istatistiklerim.</p>
+        <h2 class="section-title rgb-text" data-aos="fade-up">Kodlama Disiplini</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">Bir vizyoner sadece plan yapmaz, her gün üretir. Edu.X ve diğer projelerimdeki canlı geliştirme istatistiklerim.</p>
         
         <div class="github-container">
-            <div class="gh-card">
+            <div class="gh-card" data-aos="flip-up" data-aos-delay="200">
                 <img src="https://github-readme-stats.vercel.app/api?username=onurcakal0&show_icons=true&hide_border=true&bg_color=050b14&title_color=00f2fe&text_color=b3c2d1&icon_color=e145f1&ring_color=00f2fe" alt="Mustafa Onur Çakal GitHub Stats">
             </div>
             
-            <div class="gh-card">
+            <div class="gh-card" data-aos="flip-up" data-aos-delay="300">
                 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=onurcakal0&layout=compact&hide_border=true&bg_color=050b14&title_color=00f2fe&text_color=b3c2d1" alt="Top Languages">
             </div>
         </div>
     </section>
-    <section id="newsletter">
-        <div class="nl-container">
+
+    <section id="newsletter" data-aos="fade-in">
+        <div class="nl-container" data-aos="zoom-in">
             <h2 class="rgb-text">Edu.X Erken Erişim</h2>
             <p>Edu.X'in kapalı beta (Closed Beta) testlerine katılmak ve eğitimdeki bu dijital devrime ilk sıradan şahit olmak için yerini ayırt.</p>
             
@@ -340,7 +337,8 @@
             <p style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 15px;">Spam yok, sadece vizyon var.</p>
         </div>
     </section>
-    <footer id="iletisim">
+
+    <footer id="iletisim" data-aos="fade-up">
         <div class="footer-content">
             <h2 class="rgb-text">İŞ BİRLİĞİ İÇİN</h2>
             <p>Bir sonraki büyük fikir için her zaman hazırım.</p>
@@ -363,10 +361,20 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Modal kodları
         function openModal(modalId) { document.getElementById(modalId).style.display = "flex"; }
         function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
         window.onclick = function(event) { if (event.target.classList.contains('modal')) { event.target.style.display = "none"; } }
+
+        // AOS'u Başlat
+        AOS.init({
+            duration: 800, // Biraz daha hızlı 0.8 saniye
+            once: true,    // Sadece aşağı inerken bir kere çalışsın (yukarı çıkarken kaybolmasın)
+            offset: 100,   // Element ekranda 100px göründüğünde animasyon başlasın
+            easing: 'ease-out-cubic' // Yağ gibi kayan ivme
+        });
     </script>
 
 </body>
