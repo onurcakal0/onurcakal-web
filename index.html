@@ -109,7 +109,60 @@
         .modal-content p { color: var(--text-secondary); margin-bottom: 15px; line-height: 1.6; }
         .modal-tags { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;}
         .modal-tags span { background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; color: var(--primary-rgb); border: 1px solid rgba(0,242,254,0.3); }
+        /* Edu.X Roadmap (Yol Haritası) */
+        #roadmap { position: relative; padding: 100px 20px; }
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        /* Dikey parlayan çizgi */
+        .timeline::after { content: ''; position: absolute; width: 4px; background: linear-gradient(180deg, var(--primary-rgb), var(--secondary-rgb)); top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 10px; box-shadow: 0 0 15px var(--primary-rgb); }
+        
+        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-item.left { left: 0; }
+        .timeline-item.right { left: 50%; }
+        
+        /* Parlayan Noktalar */
+        .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--bg-color); border: 4px solid var(--primary-rgb); top: 15px; border-radius: 50%; z-index: 1; box-shadow: 0 0 10px var(--primary-rgb); transition: 0.3s; }
+        .timeline-item.right::after { left: -10px; border-color: var(--secondary-rgb); box-shadow: 0 0 10px var(--secondary-rgb); }
+        .timeline-item:hover::after { background-color: var(--primary-rgb); transform: scale(1.3); }
+        .timeline-item.right:hover::after { background-color: var(--secondary-rgb); }
 
+        /* İçerik Kartları */
+        .timeline-content { padding: 20px 30px; background-color: var(--card-bg); position: relative; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: 0.4s; }
+        .timeline-content:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .timeline-date { color: var(--primary-rgb); font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; display: inline-block; font-family: 'Unbounded', sans-serif;}
+        .timeline-item.right .timeline-date { color: var(--secondary-rgb); }
+        .timeline-content h3 { margin-bottom: 10px; font-size: 1.3rem; }
+        .timeline-content p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+
+        /* Mobilde Çizgiyi Sola Alma */
+        @media screen and (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-item.left::after, .timeline-item.right::after { left: 21px; }
+            .timeline-item.right { left: 0%; }
+        }
+        /* Canlı GitHub İstatistikleri */
+        #github-stats { padding: 80px 20px; text-align: center; }
+        .github-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+        .gh-card { background: var(--card-bg); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: 0.4s; position: relative; overflow: hidden; }
+        /* Kartlara RGB Glow Efekti */
+        .gh-card::before { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(45deg, var(--primary-rgb), var(--secondary-rgb)); z-index: -1; opacity: 0; transition: 0.4s; border-radius: 16px; }
+        .gh-card:hover { transform: translateY(-5px); border-color: transparent; }
+        .gh-card:hover::before { opacity: 1; filter: blur(10px); }
+        .gh-card img { max-width: 100%; height: auto; border-radius: 10px; position: relative; z-index: 1; }
+        /* Edu.X Özel Erişim Formu (Newsletter) */
+        #newsletter { padding: 80px 20px; text-align: center; background: linear-gradient(0deg, var(--card-bg) 0%, var(--bg-color) 100%); border-top: 1px solid rgba(255,255,255,0.02); }
+        .nl-container { max-width: 600px; margin: 0 auto; }
+        .nl-container h2 { font-size: 2.2rem; margin-bottom: 15px; }
+        .nl-container p { color: var(--text-secondary); margin-bottom: 30px; line-height: 1.6; font-size: 0.95rem; }
+        .nl-form { display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap; }
+        
+        .nl-input { flex: 1; min-width: 250px; padding: 15px 25px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3); color: white; font-size: 1rem; font-family: 'Poppins', sans-serif; transition: 0.3s; }
+        .nl-input::placeholder { color: rgba(255,255,255,0.3); }
+        /* Kutuya tıklanınca çıkan neon parlama */
+        .nl-input:focus { border-color: var(--primary-rgb); box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); outline: none; }
+        
+        .nl-btn { padding: 15px 40px; border-radius: 50px; border: none; background: linear-gradient(90deg, var(--primary-rgb), var(--secondary-rgb)); color: white; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
+        .nl-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--secondary-rgb); }    
         /* Footer */
         footer { background: var(--card-bg); padding: 50px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
         .footer-content h2 { font-size: 2rem; margin-bottom: 10px; }
@@ -181,7 +234,71 @@
             </div>
         </div>
     </section>
+    <section id="roadmap">
+        <h2 class="section-title rgb-text">Edu.X Yol Haritası</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="timeline-date">Q4 2025</span>
+                    <h3>Vizyon ve Mimari</h3>
+                    <p>Edu.X'in temel konseptinin oluşturulması. Eğitimdeki problemlerin tespiti ve çözüme yönelik algoritma tasarımlarının kağıda dökülmesi.</p>
+                </div>
+            </div>
 
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <span class="timeline-date">Q1 2026 (Şu An)</span>
+                    <h3>Prototip ve UI/UX</h3>
+                    <p>Modern arayüzlerin kodlanması. Kullanıcı deneyimini merkeze alan, hızlı ve akıcı bir önyüz (Frontend) altyapısının HTML/CSS/JS ile inşa edilmesi.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="timeline-date">Q3 2026</span>
+                    <h3>Backend Entegrasyonu ve Kapalı Beta</h3>
+                    <p>C++ ve Python disiplinleriyle geliştirilecek güçlü arka uç mimarisinin sisteme entegre edilmesi ve ilk seçkin kullanıcılarla test edilmesi.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <span class="timeline-date">Q1 2027</span>
+                    <h3>Resmi Lansman & Ölçeklenme</h3>
+                    <p>Edu.X'in tam sürüm olarak pazara çıkışı. Yatırım turlarına başlanması ve Konya'dan globale uzanan vizyonun hayata geçmesi.</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+    <section id="github-stats">
+        <h2 class="section-title rgb-text">Kodlama Disiplini</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Bir vizyoner sadece plan yapmaz, her gün üretir. Edu.X ve diğer projelerimdeki canlı geliştirme istatistiklerim.</p>
+        
+        <div class="github-container">
+            <div class="gh-card">
+                <img src="https://github-readme-stats.vercel.app/api?username=onurcakal0&show_icons=true&hide_border=true&bg_color=050b14&title_color=00f2fe&text_color=b3c2d1&icon_color=e145f1&ring_color=00f2fe" alt="Mustafa Onur Çakal GitHub Stats">
+            </div>
+            
+            <div class="gh-card">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=onurcakal0&layout=compact&hide_border=true&bg_color=050b14&title_color=00f2fe&text_color=b3c2d1" alt="Top Languages">
+            </div>
+        </div>
+    </section>
+    <section id="newsletter">
+        <div class="nl-container">
+            <h2 class="rgb-text">Edu.X Erken Erişim</h2>
+            <p>Edu.X'in kapalı beta (Closed Beta) testlerine katılmak ve eğitimdeki bu dijital devrime ilk sıradan şahit olmak için yerini ayırt.</p>
+            
+            <form class="nl-form" action="#" method="POST" onsubmit="alert('Kral vizyoner hamle! Yakında bu verileri kendi yazdığımız Backend sistemine bağlayacağız.'); return false;">
+                <input type="email" class="nl-input" placeholder="vizyoner@email.com" required>
+                <button type="submit" class="nl-btn">Katıl</button>
+            </form>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 15px;">Spam yok, sadece vizyon var.</p>
+        </div>
+    </section>
     <footer id="iletisim">
         <div class="footer-content">
             <h2 class="rgb-text">İŞ BİRLİĞİ İÇİN</h2>
