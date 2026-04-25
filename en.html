@@ -168,10 +168,10 @@
         .timeline-item.left { left: 0; }
         .timeline-item.right { left: 50%; }
         
-        .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--bg-color); border: 4px solid var(--primary-rgb); top: 15px; border-radius: 50%; z-index: 1; box-shadow: 0 0 10px var(--primary-rgb); transition: 0.3s; }
-        .timeline-item.right::after { left: -10px; border-color: var(--secondary-rgb); box-shadow: 0 0 10px var(--secondary-rgb); }
-        .timeline-item:hover::after { background-color: var(--primary-rgb); transform: scale(1.3); }
-        .timeline-item.right:hover::after { background-color: var(--secondary-rgb); }
+        .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--primary-rgb); border: 4px solid var(--bg-color); top: 15px; border-radius: 50%; z-index: 1; box-shadow: 0 0 0 2px var(--primary-rgb), 0 0 15px var(--primary-rgb); transition: 0.3s; }
+        .timeline-item.right::after { left: -10px; right: auto; background-color: var(--secondary-rgb); box-shadow: 0 0 0 2px var(--secondary-rgb), 0 0 15px var(--secondary-rgb); }
+        .timeline-item:hover::after { background-color: white; box-shadow: 0 0 0 3px var(--primary-rgb), 0 0 25px var(--primary-rgb); transform: scale(1.2); }
+        .timeline-item.right:hover::after { background-color: white; box-shadow: 0 0 0 3px var(--secondary-rgb), 0 0 25px var(--secondary-rgb); }
 
         .timeline-content { padding: 20px 30px; background-color: var(--card-bg); position: relative; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: 0.4s; }
         .timeline-content:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
