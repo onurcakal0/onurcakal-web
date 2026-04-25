@@ -18,8 +18,8 @@
 
     <style>
         :root {
-            --bg-color: #050b14; 
-            --card-bg: #0a1222;  
+            --bg-color: #0d152f; 
+            --card-bg: #131d3f;  
             --primary-rgb: #00f2fe;
             --secondary-rgb: #e145f1;
             --success-rgb: #4facfe;
@@ -29,7 +29,19 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; outline: none; }
-        body { background-color: var(--bg-color); color: var(--text-primary); overflow-x: hidden; }
+        body { 
+            background-color: var(--bg-color); 
+            background-image: radial-gradient(circle at 15% 50%, rgba(0, 242, 254, 0.05), transparent 40%), radial-gradient(circle at 85% 30%, rgba(225, 69, 241, 0.05), transparent 40%);
+            background-attachment: fixed;
+            color: var(--text-primary); 
+            overflow-x: hidden; 
+        }
+
+        /* Antigravity Style Particles */
+        .ambient-glow { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -2; background: radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.06) 0%, transparent 50%); }
+        .particles { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1; background-image: radial-gradient(1.5px 1.5px at 20px 30px, rgba(255,255,255,0.8), transparent), radial-gradient(2px 2px at 40px 70px, var(--primary-rgb), transparent), radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.6), transparent), radial-gradient(2.5px 2.5px at 160px 120px, var(--secondary-rgb), transparent), radial-gradient(1.5px 1.5px at 210px 180px, rgba(255,255,255,0.8), transparent), radial-gradient(2px 2px at 250px 80px, var(--primary-rgb), transparent), radial-gradient(1px 1px at 300px 220px, rgba(255,255,255,0.7), transparent); background-size: 350px 350px; animation: drift 100s linear infinite; opacity: 0.8; }
+        .particles::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(2px 2px at 50px 160px, var(--secondary-rgb), transparent), radial-gradient(1.5px 1.5px at 130px 80px, rgba(255,255,255,0.9), transparent), radial-gradient(2px 2px at 200px 240px, var(--primary-rgb), transparent), radial-gradient(1px 1px at 280px 110px, rgba(255,255,255,0.6), transparent), radial-gradient(2.5px 2.5px at 320px 50px, var(--secondary-rgb), transparent); background-size: 400px 400px; animation: drift 70s linear infinite reverse; opacity: 0.7; }
+        @keyframes drift { from { background-position: 0 0; } to { background-position: 1000px 1000px; } }
 
         h1, h2, h3, .logo-bottom, .btn-rgb, .close-btn { 
             font-family: 'Unbounded', sans-serif; 
@@ -47,11 +59,14 @@
         @keyframes pulseLive { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
 
         /* Header */
-        header { position: fixed; top: 0; width: 100%; background: rgba(5, 11, 20, 0.9); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        header { position: fixed; top: 0; width: 100%; background: rgba(13, 21, 47, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
         nav { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-container { display: flex; flex-direction: column; text-decoration: none; line-height: 1; }
-        .logo-top { font-size: 0.85rem; font-weight: 400; color: var(--text-secondary); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 3px; }
-        .logo-bottom { font-size: 1.8rem; font-weight: 900; text-transform: uppercase; }
+        .logo-container { display: flex; flex-direction: column; text-decoration: none; line-height: 1; position: relative; padding-left: 15px; transition: 0.3s; }
+        .logo-container::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--primary-rgb), var(--secondary-rgb)); border-radius: 10px; box-shadow: 0 0 10px var(--primary-rgb); transition: 0.3s; }
+        .logo-container:hover { transform: translateY(-2px); }
+        .logo-container:hover::before { box-shadow: 0 0 20px var(--secondary-rgb); }
+        .logo-top { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); letter-spacing: 5px; text-transform: uppercase; margin-bottom: 4px; }
+        .logo-bottom { font-size: 1.6rem; font-weight: 900; text-transform: uppercase; color: white; letter-spacing: 1px; }
         .nav-links { display: flex; gap: 30px; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 0.9rem; transition: 0.3s; text-transform: uppercase;}
         .nav-links a:hover { color: var(--primary-rgb); text-shadow: 0 0 10px var(--primary-rgb); }
@@ -288,12 +303,14 @@
     </style>
 </head>
 <body>
+    <div class="ambient-glow"></div>
+    <div class="particles"></div>
 
     <header>
         <nav>
             <a href="#hero" class="logo-container">
                 <span class="logo-top">Mustafa Onur</span>
-                <span class="logo-bottom">ÇAKAL</span>
+                <span class="logo-bottom">ÇAKAL<span style="color: var(--primary-rgb); text-shadow: 0 0 10px var(--primary-rgb);">.</span></span>
             </a>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
