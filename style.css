@@ -636,6 +636,105 @@ footer {
     gap: 30px;
 }
 
+/* --- Progress Boxes --- */
+.prog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.prog-box {
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
+    padding: 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.prog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.prog-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prog-phase {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.prog-percent {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.prog-track {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.prog-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.fill-blue {
+    background: linear-gradient(90deg, var(--primary-rgb), #5ee7df);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.fill-purple {
+    background: linear-gradient(90deg, var(--secondary-rgb), #ff0844);
+    box-shadow: 0 0 10px rgba(225, 69, 241, 0.5);
+}
+
+.prog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prog-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.prog-tags span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.prog-status-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-rgb);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .nav-links { display: none; }
