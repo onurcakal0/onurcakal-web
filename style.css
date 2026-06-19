@@ -353,13 +353,13 @@ section {
 }
 
 /* --- Cards (Glassmorphism) --- */
-.op-grid, .projects-grid, .dashboard-grid {
+.op-grid, .projects-grid, .dashboard-grid, .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
-.op-card, .proj-card, .dash-panel, .contact-card {
+.op-card, .proj-card, .dash-panel, .contact-card, .feat-card {
     background: var(--surface-bg);
     border: 1px solid var(--surface-border);
     padding: 35px;
@@ -372,7 +372,7 @@ section {
 }
 
 /* Subtle glow behind cards on hover */
-.op-card::before, .proj-card::before, .dash-panel::before {
+.op-card::before, .proj-card::before, .dash-panel::before, .feat-card::before {
     content: '';
     position: absolute;
     top: 50%; left: 50%;
@@ -385,17 +385,17 @@ section {
     pointer-events: none;
 }
 
-.op-card:hover::before, .proj-card:hover::before, .dash-panel:hover::before {
+.op-card:hover::before, .proj-card:hover::before, .dash-panel:hover::before, .feat-card:hover::before {
     transform: translate(-50%, -50%) scale(2);
 }
 
-.op-card:hover, .proj-card:hover, .dash-panel:hover {
+.op-card:hover, .proj-card:hover, .dash-panel:hover, .feat-card:hover {
     border-color: var(--surface-hover-border);
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.op-card h3, .proj-card h3, .panel-title {
+.op-card h3, .proj-card h3, .panel-title, .feat-card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
     display: flex;
@@ -404,7 +404,7 @@ section {
     color: var(--text-main);
 }
 
-.op-card p, .proj-card p, .announce-text {
+.op-card p, .proj-card p, .announce-text, .feat-card p {
     color: var(--text-secondary);
     font-size: 1rem;
     margin-bottom: 25px;
