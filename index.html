@@ -61,17 +61,16 @@
                 <a href="https://instagram.com/onurcakal0" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
 
-            <div class="launch-countdown" data-aos="zoom-in" data-aos-delay="200">
-                <span class="launch-badge">HANGİEASY LANSMAN</span>
-                <div class="countdown-timer" id="he-countdown">
-                    <div class="time-box"><span id="cd-days">00</span><small>GÜN</small></div>
-                    <div class="time-box"><span id="cd-hours">00</span><small>SAAT</small></div>
-                    <div class="time-box"><span id="cd-minutes">00</span><small>DAK</small></div>
-                    <div class="time-box"><span id="cd-seconds">00</span><small>SAN</small></div>
-                </div>
-                <div style="text-align: center; margin-top: 25px;">
-                    <a href="https://hangieasy.com" target="_blank" class="btn-he">Siteye Göz At ➔</a>
-                </div>
+            <div style="margin-top: 15px; margin-bottom: 25px;" data-aos="fade-up" data-aos-delay="100">
+                <span style="background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); color: var(--primary-rgb); padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                    <i class="fas fa-satellite-dish" style="margin-right: 5px;"></i> Sistem Durumu: Edu.X Faz 3 %65 | HangiEasy Yayında
+                </span>
+            </div>
+
+            <div class="launch-countdown" style="padding: 30px; text-align: center; border-color: rgba(225, 69, 241, 0.4);" data-aos="zoom-in" data-aos-delay="200">
+                <span class="launch-badge" style="color: var(--secondary-rgb); text-shadow: 0 0 10px rgba(225, 69, 241, 0.5);">HANGİEASY YAYINDA!</span>
+                <p style="color: var(--text-secondary); margin: 15px 0 25px 0; font-size: 1.05rem;">Yeni dijital ekosistemimiz HangiEasy.com resmi olarak açıldı. Ziyaret edebilirsiniz.</p>
+                <a href="https://hangieasy.com" target="_blank" class="btn-he" style="background: linear-gradient(90deg, var(--secondary-rgb), #ff0844);">HangiEasy'yi Ziyaret Et ➔</a>
             </div>
 
             <a href="#iletisim" class="btn-rgb">Bana Ulaşın</a>
@@ -183,10 +182,10 @@
                                 Edu.X Core System
                                 <span class="prog-phase">Faz 3: Backend Entegrasyonu ve Kapalı Beta</span>
                             </div>
-                            <span class="prog-percent">%50</span>
+                            <span class="prog-percent">%65</span>
                         </div>
                         <div class="prog-track">
-                            <div class="prog-fill fill-blue" style="width: 50%;"></div>
+                            <div class="prog-fill fill-blue" style="width: 65%;"></div>
                         </div>
                         <div class="prog-meta">
                             <div class="prog-tags">
@@ -473,7 +472,7 @@
     <div id="eduxModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('eduxModal')">&times;</span>
-            <h2 class="rgb-text">Edu.X Platformu</h2>
+            <h2 class="rgb-text">Edu.X Platformu <span class="badge" style="background: var(--primary-rgb); color: white; font-size: 0.8rem; padding: 2px 8px; border-radius: 4px; vertical-align: middle;">Beta</span></h2>
             <p><strong>Eğitimin Dijital Evrimi:</strong> Edu.X sadece bir uygulama değil; öğrenci ve eğitmenler
                 arasındaki bariyerleri kaldıran modern bir ekosistemdir.</p>
             <p>Geleneksel eğitim kalıplarını yıkarak, hızlı, güvenilir ve tamamen kullanıcı odaklı bir arayüz ile eğitim
@@ -483,6 +482,7 @@
                 <span>Eğitim Teknolojileri</span>
                 <span>Modern UX/UI</span>
                 <span>HTML/CSS</span>
+                <a href="https://edux.onurcakal.com" target="_blank" style="color: var(--primary-rgb); text-decoration: underline; display: block; margin-top: 10px;">Platforma Git ➔</a>
             </div>
         </div>
     </div>
@@ -534,40 +534,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', fetchGitHubData);
-
-        // Countdown Timer Logic
-        function startCountdown() {
-            const launchDate = new Date('June 23, 2026 00:00:00').getTime();
-            
-            const timer = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = launchDate - now;
-                
-                if (distance < 0) {
-                    clearInterval(timer);
-                    if(document.getElementById('cd-days')) {
-                        document.getElementById('cd-days').innerText = "00";
-                        document.getElementById('cd-hours').innerText = "00";
-                        document.getElementById('cd-minutes').innerText = "00";
-                        document.getElementById('cd-seconds').innerText = "00";
-                    }
-                    return;
-                }
-                
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                if(document.getElementById('cd-days')) {
-                    document.getElementById('cd-days').innerText = days < 10 ? "0" + days : days;
-                    document.getElementById('cd-hours').innerText = hours < 10 ? "0" + hours : hours;
-                    document.getElementById('cd-minutes').innerText = minutes < 10 ? "0" + minutes : minutes;
-                    document.getElementById('cd-seconds').innerText = seconds < 10 ? "0" + seconds : seconds;
-                }
-            }, 1000);
-        }
-        document.addEventListener('DOMContentLoaded', startCountdown);
     </script>
 
 </body>
