@@ -1,589 +1,174 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mustafa Onur Çakal | Visionary Tech Leader</title>
-
-    <meta name="description"
-        content="Mustafa Onur Çakal - Software Engineering Student & Founder of Edu.X. Yazılım mühendisliği, girişimcilik ve teknoloji vizyonu.">
-    <meta name="keywords"
-        content="Mustafa Onur Çakal, Onur Çakal, Edu.X, Yazılım Mühendisi, Girişimci, Software Engineering, Konya Yazılım">
-    <meta name="author" content="Mustafa Onur Çakal">
-    <meta name="robots" content="index, follow">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Unbounded:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Onur Çakal | Developer Designer Creator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-    <div class="ambient-glow"></div>
-    <div class="particles"></div>
+
+    <div class="app-wrapper">
+        <div class="bg-mesh"></div>
         
-    <header>
-        <nav>
-            <a href="#hero" class="logo-container cyber-glitch" data-value="Mustafa Onur Çakal" style="font-size: 1.5rem; letter-spacing: -0.05em; font-weight: 700; line-height: 1;">
-                Mustafa Onur Çakal
-            </a>
-            <ul class="nav-links">
-                <li><a href="#hero">Giriş</a></li>
-                <li><a href="#hakkimda">Vizyon</a></li>
-                <li><a href="#projeler">Projeler</a></li>
-                <li><a href="#acik-kaynak">Açık Kaynak</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-            <div class="lang-toggle"
-                style="display: inline-block; margin-left: 20px; font-weight: 600; font-family: 'Poppins', sans-serif;">
-                <a href="index.html" style="color: #00f2fe; text-decoration: none; text-shadow: 0 0 5px #00f2fe;">TR</a>
-                <span style="color: #4a5568; margin: 0 5px;">|</span>
-                <a href="en.html" style="color: #8a9aaa; text-decoration: none; transition: 0.3s;"
-                    onmouseover="this.style.color='#e145f1'" onmouseout="this.style.color='#8a9aaa'">EN</a>
-            </div>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="cyber-glitch" data-value="Mustafa Onur Çakal">Mustafa Onur Çakal</h1>
-            <h2>Software Engineering Student | Founder of Edu.X</h2>
-
-            <div class="social-icons">
-                <a href="https://github.com/onurcakal0" target="_blank"><i class="fab fa-github"></i></a>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="#hero" class="logo">O<span>Ç</span></a>
+            
+            <nav class="nav-links">
+                <a href="#iletisim" class="nav-item">İletişim</a>
+                <a href="#acik-kaynak" class="nav-item">Açık Kaynak</a>
+                <a href="#projeler" class="nav-item">Projeler</a>
+                <a href="#hakkimda" class="nav-item">Vizyon</a>
+                <a href="#hero" class="nav-item active">Giriş</a>
+            </nav>
+            
+            <div class="social-links">
                 <a href="https://linkedin.com/in/onurcakal" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/onurcakal0" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://instagram.com/onurcakal0" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="en.html" style="font-size: 0.8rem; font-family: var(--font-mono); margin-top: 10px; color: var(--text-muted); text-decoration: none;">EN</a>
             </div>
+        </aside>
 
-            <div style="margin-top: 15px; margin-bottom: 25px;" data-aos="fade-up" data-aos-delay="100">
-                <span style="background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.3); color: var(--primary-rgb); padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
-                    <i class="fas fa-satellite-dish" style="margin-right: 5px;"></i> Sistem Durumu: Edu.X Faz 3 %65 | HangiEasy Yayında
-                </span>
-            </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <a href="#iletisim" class="top-contact-btn">Bana Ulaşın</a>
 
-            <div class="launch-countdown" style="padding: 30px; text-align: center; border-color: rgba(225, 69, 241, 0.4);" data-aos="zoom-in" data-aos-delay="200">
-                <span class="launch-badge" style="color: var(--secondary-rgb); text-shadow: 0 0 10px rgba(225, 69, 241, 0.5);">HANGİEASY YAYINDA!</span>
-                <p style="color: var(--text-secondary); margin: 15px 0 25px 0; font-size: 1.05rem;">Yeni dijital ekosistemimiz HangiEasy.com resmi olarak açıldı. Ziyaret edebilirsiniz.</p>
-                <a href="https://hangieasy.com" target="_blank" class="btn-he" style="background: linear-gradient(90deg, var(--secondary-rgb), #ff0844);">HangiEasy'yi Ziyaret Et ➔</a>
-            </div>
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section">
+                <div class="pre-title">I'M MUSTAFA ONUR ÇAKAL</div>
+                <h1 class="hero-title">
+                    <span>Developer</span>
+                    <span>Designer</span>
+                    <span>Creator</span>
+                </h1>
+            </section>
 
-            <a href="#iletisim" class="btn-rgb">Bana Ulaşın</a>
-        </div>
-    </section>
-
-    <section id="hakkimda">
-        <div class="about-text" data-aos="fade-right">
-            <h2 class="section-title rgb-text" style="text-align:left; left: 0; transform: none; margin-bottom:40px;">
-                Vizyon</h2>
-            <p>Geleceğin teknolojilerini kodlayan bir <strong>Yazılım Mühendisliği</strong> öğrencisiyim. Geleneksel
-                yöntemleri modern kodlama disiplinleriyle harmanlıyor, imparatorluğumu dijital dünyada inşa ediyorum.
-            </p>
-            <p><strong>Edu.X</strong> gibi devasa projelerin mimarı olarak, sadece kod yazmıyorum; kullanıcı deneyimini
-                zirveye taşıyacak çözümler üretiyorum.</p>
-        </div>
-        <div class="features">
-            <div class="feat-card" data-aos="fade-up" data-aos-delay="100">
-                <h3>Girişimcilik</h3>
-                <p>Edu.X'in kurucusu olarak pazar analizi ve ürün geliştirme.</p>
-            </div>
-            <div class="feat-card" data-aos="fade-up" data-aos-delay="200">
-                <h3>Backend & Algoritma</h3>
-                <p>C++ ile güçlü mantık, Python ile dinamik çözümler.</p>
-            </div>
-            <div class="feat-card" data-aos="fade-up" data-aos-delay="300">
-                <h3>Frontend</h3>
-                <p>HTML, CSS, JS ile modern ve akıcı UX tasarımı.</p>
-            </div>
-            <div class="feat-card" data-aos="fade-up" data-aos-delay="400">
-                <h3>Vizyoner</h3>
-                <p>Geleceği öngören teknolojik çözümler.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="operasyon">
-        <h2 class="section-title rgb-text" data-aos="fade-up">Operasyon Günlüğü</h2>
-        <p style="color: var(--text-secondary); text-align: center; max-width: 600px; margin: -30px auto 0;"
-            data-aos="fade-up" data-aos-delay="100">Vizyoner bir lider şeffaftır. Karargahtan gelen en güncel duyurular
-            ve projelerimin anlık ilerleme durumu.</p>
-
-        <div class="op-grid">
-
-            <div class="op-panel" data-aos="fade-right" data-aos-delay="200">
-                <h3 class="op-title"><i class="fas fa-satellite-dish"
-                        style="color: var(--secondary-rgb); text-shadow: 0 0 15px var(--secondary-rgb);"></i> Karargah
-                    Duyuruları</h3>
-                <div class="announce-list">
-
-                    <div class="announce-item">
-                        <div class="announce-header">
-                            <span class="announce-badge badge-update">HANGİEASY CANLIDA!</span>
-                            <span class="announce-date"><i class="far fa-calendar-alt"></i> 25 Mayıs 2026</span>
-                        </div>
-                        <div class="announce-text">
-                            <strong>23 Haziran'da Lansman için Geri Sayıma Başladık!</strong>
-                            Yeni HangiEasy platformu an itibariyle yayına alındı. Lansman tarihi için geri sayım devam ediyor, hemen göz atabilirsiniz!
-                        </div>
+            <!-- Vizyon Section -->
+            <section id="hakkimda" class="section-wrapper">
+                <div class="section-title-container">
+                    <div class="section-title-outline">Vizyon Vizyon</div>
+                    <div class="section-title-solid">Vizyon Vizyon</div>
+                </div>
+                
+                <div class="two-col">
+                    <div class="about-text">
+                        <p>Geleceğin teknolojilerini kodlayan bir Yazılım Mühendisliği öğrencisiyim. Geleneksel yöntemleri modern kodlama disiplinleriyle harmanlıyor, dijital dünyada kendi imparatorluğumu inşa ediyorum.</p>
+                        <p>Edu.X gibi vizyoner projelerin kurucusu olarak, sadece kod yazmıyor, devrim niteliğinde kullanıcı deneyimleri kurguluyorum.</p>
                     </div>
-
-                    <div class="announce-item">
-                        <div class="announce-header">
-                            <span class="announce-badge badge-update">YENİ PROJE (HANGİEASY)</span>
-                            <span class="announce-date"><i class="far fa-calendar-alt"></i> 26 Nisan 2026</span>
-                        </div>
-                        <div class="announce-text">
-                            <strong>HangiEasy.com Duyuruldu!</strong>
-                            Dijital dünyada kullanıcıların karar verme süreçlerini kolaylaştıracak yeni vizyonumuz
-                            HangiEasy'nin inşasına başladık.
-                        </div>
-                    </div>
-
-                    <div class="announce-item">
-                        <div class="announce-header">
-                            <span class="announce-badge badge-system">SİSTEM GÜNCELLEMESİ</span>
-                            <span class="announce-date"><i class="far fa-calendar-alt"></i> 21 Mart 2026</span>
-                        </div>
-                        <div class="announce-text">
-                            <strong>Patent Alımı!</strong>
-                            Edu.X için resmi patent başvurusunu resmen tamamladık! Artık resmiyiz.
-                        </div>
-                    </div>
-
-                    <div class="announce-item">
-                        <div class="announce-header">
-                            <span class="announce-badge badge-update">YENİ PROJE (EDU.X)</span>
-                            <span class="announce-date"><i class="far fa-calendar-alt"></i> 23 OCAK 2026</span>
-                        </div>
-                        <div class="announce-text">
-                            <strong>Edu.X Mimari Tasarımı Başladı.</strong>
-                            Eğitim dünyasında kuralları baştan yazacak olan Edu.X platformunun backend algoritma
-                            temelleri (C++ ve Python) kağıda dökülüyor. Kapalı beta yaklaşıyor.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="op-panel" data-aos="fade-left" data-aos-delay="300">
-                <h3 class="op-title"><i class="fas fa-rocket"
-                        style="color: var(--primary-rgb); text-shadow: 0 0 15px var(--primary-rgb);"></i> Proje İlerleme
-                    Durumu</h3>
-                <div class="prog-container">
-
-                    <div class="prog-box">
-                        <div class="prog-header">
-                            <div class="prog-name">
-                                Edu.X Core System
-                                <span class="prog-phase">Faz 3: Backend Entegrasyonu ve Kapalı Beta</span>
-                            </div>
-                            <span class="prog-percent">%65</span>
-                        </div>
-                        <div class="prog-track">
-                            <div class="prog-fill fill-blue" style="width: 65%;"></div>
-                        </div>
-                        <div class="prog-meta">
-                            <div class="prog-tags">
-                                <span>C++</span>
-                                <span>Python</span>
-                            </div>
-                            <span class="prog-status-text"><i class="fas fa-cog fa-spin"></i> Geliştiriliyor</span>
-                        </div>
-                    </div>
-
-                    <div class="prog-box">
-                        <div class="prog-header">
-                            <div class="prog-name">
-                                HangiEasy.com
-                                <span class="prog-phase">Faz 4: Canlı Veri (Live API)</span>
-                            </div>
-                            <span class="prog-percent">%100</span>
-                        </div>
-                        <div class="prog-track">
-                            <div class="prog-fill fill-purple" style="width: 100%;"></div>
-                        </div>
-                        <div class="prog-meta">
-                            <div class="prog-tags">
-                                <span>HTML/CSS</span>
-                                <span>JS</span>
-                            </div>
-                            <span class="prog-status-text" style="color: var(--secondary-rgb);"><i class="fas fa-check-circle"></i> Canlıda</span>
-                        </div>
-                    </div>
-
-                    <div class="prog-box">
-                        <div class="prog-header">
-                            <div class="prog-name">
-                                onurcakal.com V5.0
-                                <span class="prog-phase">Faz 3: Canlı Veri (Live API)</span>
-                            </div>
-                            <span class="prog-percent">%100</span>
-                        </div>
-                        <div class="prog-track">
-                            <div class="prog-fill fill-purple" style="width: 100%;"></div>
-                        </div>
-                        <div class="prog-meta">
-                            <div class="prog-tags">
-                                <span>HTML/CSS</span>
-                                <span>JS Fetch API</span>
-                            </div>
-                            <span class="prog-status-text" style="color: var(--secondary-rgb);"><i
-                                    class="fas fa-check-circle"></i> Canlıda</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="projeler">
-        <h2 class="section-title rgb-text" data-aos="fade-up">Projeler İmparatorluğu</h2>
-        <div class="projects-grid">
-            <div class="proj-card" onclick="openModal('eduxModal')" data-aos="zoom-in-up" data-aos-delay="100">
-                <span class="proj-status">Geliştiriliyor</span>
-                <h3>Edu.X</h3>
-                <p>Eğitim dünyasını dijitalleştiren, kullanıcı dostu arabirimi ve güçlü altyapısı ile modern bir
-                    platform vizyonu.</p>
-                <div class="proj-links"><span class="rgb-text">Detayları Gör ➔</span></div>
-            </div>
-
-            <div class="proj-card" data-aos="zoom-in-up" data-aos-delay="200">
-                <span class="proj-status" style="color:#b3c2d1; border-color:#b3c2d1;">Canlıda</span>
-                <h3>onurcakal.com</h3>
-                <p>Kişisel markamı ve vizyonumu dünyaya açan, SEO uyumlu ve premium lacivert temalı portfolyo
-                    ekosistemi.</p>
-                <div class="proj-links"><span>GitHub'da İncele</span></div>
-            </div>
-
-            <div class="proj-card" onclick="window.open('https://hangieasy.com', '_blank')" data-aos="zoom-in-up"
-                data-aos-delay="300">
-                <span class="proj-status" style="color:#b3c2d1; border-color:#b3c2d1;">Canlıda</span>
-                <h3>HangiEasy.com</h3>
-                <p>Kullanıcıların karmaşık kararları kolayca almasını sağlayan, hız ve modern UI odaklı yeni platform
-                    vizyonumuz.</p>
-                <div class="proj-links"><span class="rgb-text">Ziyaret Et ➔</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="acik-kaynak">
-        <h2 class="section-title rgb-text" data-aos="fade-up">Açık Kaynak Projeler</h2>
-        <div class="projects-grid">
-            <div class="proj-card" onclick="window.open('https://github.com/onurcakal0/yt-ai-videosfactory', '_blank')" data-aos="zoom-in-up" data-aos-delay="100">
-                <span class="proj-status" style="color:var(--primary-rgb); border-color:var(--primary-rgb);">GitHub</span>
-                <h3>yt-ai-videosfactory</h3>
-                <p>Yapay zeka kullanarak otomatik YouTube videoları üretmek için geliştirdiğim açık kaynaklı Python kütüphanesi ve otomasyon aracı.</p>
-                <div class="proj-links"><span class="rgb-text">İncele ➔</span></div>
-            </div>
-
-            <div class="proj-card" onclick="window.open('https://github.com/onurcakal0/cpp-sekil-bastirma', '_blank')" data-aos="zoom-in-up" data-aos-delay="200">
-                <span class="proj-status" style="color:var(--primary-rgb); border-color:var(--primary-rgb);">GitHub</span>
-                <h3>C++ Şekil Bastırma</h3>
-                <p>C++ programlama dili kullanılarak konsol üzerinde algoritmik temellerle çeşitli geometrik şekillerin çizimini sağlayan eğitim odaklı proje.</p>
-                <div class="proj-links"><span class="rgb-text">İncele ➔</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="roadmap">
-        <h2 class="section-title rgb-text" data-aos="fade-up">Edu.X Yol Haritası</h2>
-        <div class="timeline">
-
-            <div class="timeline-item left" data-aos="fade-right" data-aos-delay="100">
-                <div class="timeline-content">
-                    <span class="timeline-date">Q4 2025</span>
-                    <h3>Vizyon ve Mimari</h3>
-                    <p>Edu.X'in temel konseptinin oluşturulması. Eğitimdeki problemlerin tespiti ve çözüme yönelik
-                        algoritma tasarımlarının kağıda dökülmesi.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
-                <div class="timeline-content">
-                    <span class="timeline-date">Q1 2026 (Şu An)</span>
-                    <h3>Prototip ve UI/UX</h3>
-                    <p>Modern arayüzlerin kodlanması. Kullanıcı deneyimini merkeze alan, hızlı ve akıcı bir önyüz
-                        (Frontend) altyapısının HTML/CSS/JS ile inşa edilmesi.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item left" data-aos="fade-right" data-aos-delay="300">
-                <div class="timeline-content">
-                    <span class="timeline-date">Q3 2026</span>
-                    <h3>Backend Entegrasyonu ve Kapalı Beta</h3>
-                    <p>C++ ve Python disiplinleriyle geliştirilecek güçlü arka uç mimarisinin sisteme entegre edilmesi
-                        ve ilk seçkin kullanıcılarla test edilmesi.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item right" data-aos="fade-left" data-aos-delay="400">
-                <div class="timeline-content">
-                    <span class="timeline-date">Q1 2027</span>
-                    <h3>Resmi Lansman & Ölçeklenme</h3>
-                    <p>Edu.X'in tam sürüm olarak pazara çıkışı. Yatırım turlarına başlanması ve Konya'dan globale uzanan
-                        vizyonun hayata geçmesi.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="roadmap-he" style="margin-top: 50px;">
-        <h2 class="section-title rgb-text" data-aos="fade-up">HangiEasy.com Yol Haritası</h2>
-        <div class="timeline">
-
-            <div class="timeline-item left" data-aos="fade-right" data-aos-delay="100">
-                <div class="timeline-content">
-                    <span class="timeline-date">Q2 2026 (Tamamlandı)</span>
-                    <h3>Fikir & Mimari Tasarım</h3>
-                    <p>Kullanıcıların karmaşık kararları anında verebilmesi için en uygun algoritma ve kullanıcı dostu arayüz tasarlandı.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
-                <div class="timeline-content">
-                    <span class="timeline-date">Şu An (Canlıda)</span>
-                    <h3>Canlı Veri & API Entegrasyonu</h3>
-                    <p>Proje başarılı bir şekilde canlıya alındı. Optimizasyonlar ve altyapı güncellemeleri hız kesmeden devam ediyor.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item left" data-aos="fade-right" data-aos-delay="300">
-                <div class="timeline-content">
-                    <span class="timeline-date">23 Haziran 2026</span>
-                    <h3>Resmi Lansman</h3>
-                    <p>Tüm özellikleriyle tam sürüm HangiEasy.com'un küresel lansmanı yapılacak ve geri sayım tamamlanacak.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="github-stats">
-        <h2 class="section-title rgb-text" data-aos="fade-up">Sistem Merkezi</h2>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; text-align: center;"
-            data-aos="fade-up" data-aos-delay="100">API'leri kendimiz yazarız. İşte doğrudan GitHub karargahımdan
-            (onurcakal0) çekilen canlı geliştirme istatistiklerim.</p>
-
-        <div class="dashboard-grid">
-
-            <div class="dash-panel" data-aos="fade-right" data-aos-delay="200">
-                <h3 class="panel-title">Canlı Performans <span class="live-badge">
-                        <div class="live-dot"></div> LIVE
-                    </span></h3>
-                <div class="stat-boxes">
-                    <div class="stat-box">
-                        <i class="fas fa-cubes"
-                            style="color: var(--primary-rgb); font-size: 2rem; margin-bottom: 15px;"></i>
-                        <span class="stat-number" id="gh-repos">...</span>
-                        <span class="stat-label">Aktif Proje</span>
-                    </div>
-                    <div class="stat-box">
-                        <i class="fas fa-users"
-                            style="color: var(--secondary-rgb); font-size: 2rem; margin-bottom: 15px;"></i>
-                        <span class="stat-number" id="gh-followers">...</span>
-                        <span class="stat-label">Takipçi</span>
-                    </div>
-                </div>
-                <div class="last-active-text">
-                    Son Kodlama Mührü: <br>
-                    <strong id="gh-last-active"
-                        style="color: white; display: block; margin-top: 5px; font-size: 1rem;">Veri
-                        Çekiliyor...</strong>
-                </div>
-            </div>
-
-            <div class="dash-panel" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="panel-title">Teknoloji Cephaneliği</h3>
-
-                <div class="skill">
-                    <div class="skill-info"><span>HTML & CSS (Arayüz)</span><span>92%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress"
-                            style="width: 92%; background: linear-gradient(90deg, var(--primary-rgb), var(--secondary-rgb));">
+                    <div class="item-list">
+                        <div class="list-item">
+                            <span class="item-date">EĞİTİM | DEVAM EDİYOR</span>
+                            <h3 class="item-title">Yazılım Mühendisliği</h3>
+                            <p class="item-desc">Modern yazılım mimarileri, veri yapıları ve algoritmalar üzerine akademik çalışmalar.</p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="skill">
-                    <div class="skill-info"><span>C++ (Algoritma/Core)</span><span>75%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress"
-                            style="width: 75%; background: linear-gradient(90deg, var(--primary-rgb), var(--secondary-rgb));">
+            <!-- Projects Section -->
+            <section id="projeler" class="section-wrapper">
+                <div class="section-title-container">
+                    <div class="section-title-outline">Projeler Projeler</div>
+                    <div class="section-title-solid">Projeler Projeler</div>
+                </div>
+                
+                <div class="item-list">
+                    <div class="list-item">
+                        <span class="item-date">HAZ 2026 - GÜNCEL</span>
+                        <h3 class="item-title">HangiEasy.com</h3>
+                        <p class="item-desc">Tüm özellikleriyle tam sürüm HangiEasy.com'un küresel lansmanı yapıldı. Modern ve performanslı bir dijital ekosistem.</p>
+                        <div class="tags">
+                            <span>Web App</span>
+                            <span>Full Stack</span>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <span class="item-date">DEVAM EDİYOR</span>
+                        <h3 class="item-title">Edu.X Core System</h3>
+                        <p class="item-desc">Geleneksel eğitim kalıplarını yıkan, hızlı ve güvenilir, tamamen kullanıcı odaklı yeni nesil eğitim ekosistemi. Faz 3 Backend Entegrasyonu devam ediyor (%65).</p>
+                        <div class="tags">
+                            <span>EdTech</span>
+                            <span>SaaS</span>
+                            <span>Beta</span>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="skill">
-                    <div class="skill-info"><span>Python (Backend API)</span><span>65%</span></div>
-                    <div class="progress-bar">
-                        <div class="progress"
-                            style="width: 65%; background: linear-gradient(90deg, var(--primary-rgb), var(--secondary-rgb));">
-                        </div>
+            <!-- Open Source Section -->
+            <section id="acik-kaynak" class="section-wrapper">
+                <div class="section-title-container">
+                    <div class="section-title-outline">Açık Kaynak Açık Kaynak</div>
+                    <div class="section-title-solid">Açık Kaynak Açık Kaynak</div>
+                </div>
+                
+                <div class="item-list">
+                    <div class="list-item">
+                        <span class="item-date">GİTHUB KÜTÜPHANESİ</span>
+                        <h3 class="item-title">Operasyon Günlüğü</h3>
+                        <p class="item-desc">Açık kaynak dünyasına aktif katkılarım. Depo (Repository) Güncellemeleri, Commit akışları ve sistem logları.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="dash-panel" data-aos="fade-left" data-aos-delay="400">
-                <h3 class="panel-title">Sistem Logları</h3>
-                <ul class="activity-list">
-                    <li><i class="fas fa-terminal"></i> <span><strong>onurcakal.com</strong> - AOS animasyon motoru
-                            entegre edildi ve UI yenilendi.</span></li>
-                    <li><i class="fas fa-globe"></i> <span><strong>Global Vizyon</strong> - TR/EN çift dilli mimari
-                            başarıyla canlıya alındı.</span></li>
-                    <li><i class="fas fa-shield-alt"></i> <span><strong>Siber Güvenlik</strong> - Cloudflare TLS 1.3 ve
-                            Let's Encrypt SSL mühürlendi.</span></li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="newsletter" data-aos="fade-in">
-        <div class="nl-container" data-aos="zoom-in">
-            <h2 class="rgb-text">Edu.X Erken Erişim</h2>
-            <p>Edu.X'in kapalı beta (Closed Beta) testlerine katılmak ve eğitimdeki bu dijital devrime ilk sıradan şahit
-                olmak için yerini ayırt.</p>
-
-            <form class="nl-form" action="https://formspree.io/f/xjgajqwn" method="POST">
-                <input type="email" name="email" class="nl-input" placeholder="vizyoner@email.com" required>
-                <button type="submit" class="nl-btn">Katıl</button>
-            </form>
-            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 15px;">Spam yok, sadece vizyon var.
-            </p>
-        </div>
-    </section>
-
-    <footer id="iletisim" data-aos="fade-up">
-        <div class="footer-content">
-            <h2 class="rgb-text">İŞ BİRLİĞİ İÇİN</h2>
-            <p>Bir sonraki büyük fikir için her zaman hazırım.</p>
-            <a href="mailto:eduxbilgilendirme@gmail.com">eduxbilgilendirme@gmail.com</a>
-        </div>
-    </footer>
-
-    <div id="eduxModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('eduxModal')">&times;</span>
-            <h2 class="rgb-text">Edu.X Platformu <span class="badge" style="background: var(--primary-rgb); color: white; font-size: 0.8rem; padding: 2px 8px; border-radius: 4px; vertical-align: middle;">Beta</span></h2>
-            <p><strong>Eğitimin Dijital Evrimi:</strong> Edu.X sadece bir uygulama değil; öğrenci ve eğitmenler
-                arasındaki bariyerleri kaldıran modern bir ekosistemdir.</p>
-            <p>Geleneksel eğitim kalıplarını yıkarak, hızlı, güvenilir ve tamamen kullanıcı odaklı bir arayüz ile eğitim
-                dünyasına yeni bir vizyon getiriyoruz. Temelleri atıldı, kodlamalar sürüyor.</p>
-            <div class="modal-tags">
-                <span>Girişimcilik</span>
-                <span>Eğitim Teknolojileri</span>
-                <span>Modern UX/UI</span>
-                <span>HTML/CSS</span>
-                <a href="https://edux.onurcakal.com" target="_blank" style="color: var(--primary-rgb); text-decoration: underline; display: block; margin-top: 10px;">Platforma Git ➔</a>
-            </div>
-        </div>
+            <!-- Contact Section -->
+            <section id="iletisim" class="section-wrapper">
+                <div class="section-title-container">
+                    <div class="section-title-outline">İletişim İletişim</div>
+                    <div class="section-title-solid">İletişim İletişim</div>
+                </div>
+                
+                <div class="two-col">
+                    <div class="contact-text">
+                        <p class="about-text" style="margin-bottom: 40px;">Projeniz mi var? Veya yazılım mühendisliği, modern web mimarileri üzerine bir fikriniz mi var? Bağlantı kuralım.</p>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="input-group">
+                            <label>İSİM</label>
+                            <input type="text" placeholder="Adınız">
+                        </div>
+                        <div class="input-group">
+                            <label>E-POSTA</label>
+                            <input type="email" placeholder="ornek@mail.com">
+                        </div>
+                        <div class="input-group">
+                            <label>MESAJ</label>
+                            <textarea placeholder="Mesajınızı buraya yazın..."></textarea>
+                        </div>
+                        <button type="button" class="btn-submit">Gönder</button>
+                    </form>
+                </div>
+            </section>
+            
+        </main>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        function openModal(modalId) { document.getElementById(modalId).style.display = "flex"; }
-        function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
-        window.onclick = function (event) { if (event.target.classList.contains('modal')) { event.target.style.display = "none"; } }
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+        const mainContent = document.querySelector('.main-content');
 
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-            easing: 'ease-out-cubic'
-        });
-
-        async function fetchGitHubData() {
-            const username = 'onurcakal0';
-
-            try {
-                const userResponse = await fetch(`https://api.github.com/users/${username}`);
-                const userData = await userResponse.json();
-
-                if (userData.message && userData.message.includes("API rate limit")) {
-                    throw new Error("GitHub Limit Aşımı");
+        mainContent.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (mainContent.scrollTop >= sectionTop - 150) {
+                    current = section.getAttribute('id');
                 }
+            });
 
-                document.getElementById('gh-repos').innerText = userData.public_repos;
-                document.getElementById('gh-followers').innerText = userData.followers;
-
-                const eventsResponse = await fetch(`https://api.github.com/users/${username}/events/public?per_page=1`);
-                const eventsData = await eventsResponse.json();
-
-                if (eventsData && eventsData.length > 0) {
-                    const lastEventDate = new Date(eventsData[0].created_at);
-                    const options = { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' };
-                    document.getElementById('gh-last-active').innerText = lastEventDate.toLocaleDateString('tr-TR', options);
-                } else {
-                    document.getElementById('gh-last-active').innerText = "Yakın zamanda tespit edilemedi.";
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes(current)) {
+                    item.classList.add('active');
                 }
-
-            } catch (error) {
-                console.error("Sistem Hatası: GitHub verisi çekilemedi.", error);
-                document.getElementById('gh-repos').innerText = "20+";
-                document.getElementById('gh-followers').innerText = "👑";
-                document.getElementById('gh-last-active').innerText = "Sistem Bağlantısı Bekleniyor...";
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', fetchGitHubData);
-
-        // Cyber Glitch Decode Animation
-        document.addEventListener('DOMContentLoaded', () => {
-            const glitchElements = document.querySelectorAll('.cyber-glitch');
-            
-            glitchElements.forEach(el => {
-                let originalText = el.dataset.value;
-                if (!originalText) return;
-                
-                // Initialize as gold text
-                el.innerHTML = `<span class="gold-text">${originalText}</span>`;
-                
-                const playAnimation = () => {
-                    let iteration = 0;
-                    clearInterval(el.interval);
-                    
-                    el.interval = setInterval(() => {
-                        const newHtml = originalText
-                            .split("")
-                            .map((letter, index) => {
-                                if(letter === " ") return " ";
-                                
-                                if(index < iteration) {
-                                    return `<span class="gold-text">${originalText[index]}</span>`;
-                                }
-                                const randomBinary = Math.random() > 0.5 ? "1" : "0";
-                                return `<span class="matrix-text">${randomBinary}</span>`;
-                            })
-                            .join("");
-                        
-                        el.innerHTML = newHtml;
-                        
-                        if(iteration >= originalText.length){ 
-                            clearInterval(el.interval);
-                            el.innerHTML = `<span class="gold-text">${originalText}</span>`;
-                        }
-                        
-                        iteration += 1 / 2; // Speed up the cascade slightly
-                    }, 40);
-                };
-                
-                // Play on load
-                setTimeout(playAnimation, 500);
-                
-                // Play on hover
-                el.addEventListener('mouseover', playAnimation);
             });
         });
     </script>
-
 </body>
-
 </html>
