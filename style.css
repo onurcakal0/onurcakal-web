@@ -104,21 +104,23 @@ body {
 .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     margin-top: auto;
     margin-bottom: auto;
+    flex-shrink: 0;
 }
 
 .nav-item {
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     transition: color 0.3s ease;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-item:hover, .nav-item.active {
