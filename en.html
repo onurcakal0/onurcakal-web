@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mustafa Onur Çakal | Developer Designer Creator</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -105,10 +105,47 @@
                 </div>
                 
                 <div class="item-list">
+                    <a href="https://github.com/onurcakal0/yt-ai-videosfactory" target="_blank" class="list-item" style="text-decoration: none; display: block;">
+                        <span class="item-date">GITHUB REPOSITORY</span>
+                        <h3 class="item-title">yt-ai-videosfactory</h3>
+                        <p class="item-desc">An automated Python library for generating YouTube videos using Artificial Intelligence. End-to-end automation of video creation processes.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>AI</span>
+                            <span>Automation</span>
+                        </div>
+                    </a>
+
                     <div class="list-item">
                         <span class="item-date">GITHUB REPOSITORY</span>
                         <h3 class="item-title">Operation Log</h3>
                         <p class="item-desc">My active contributions to the open-source world. Repository updates, commit flows, and system logs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Metrics Section -->
+            <section id="metrics" class="section-wrapper">
+                <div class="section-title-container">
+                    <div class="section-title-outline">Metrics</div>
+                    <div class="section-title-solid">Metrics</div>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <i class="fab fa-github metric-icon"></i>
+                        <h2 class="metric-number" data-target="0" id="gh-repos">0</h2>
+                        <span class="metric-label">Repositories</span>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-users metric-icon"></i>
+                        <h2 class="metric-number" data-target="0" id="gh-followers">0</h2>
+                        <span class="metric-label">Followers</span>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-star metric-icon"></i>
+                        <h2 class="metric-number" data-target="0" id="gh-stars">0</h2>
+                        <span class="metric-label">Stars Earned</span>
                     </div>
                 </div>
             </section>
@@ -167,6 +204,64 @@
                 }
             });
         });
+
+        // GitHub Stats Fetch & Animate
+        const fetchGitHubStats = async () => {
+            try {
+                const userRes = await fetch('https://api.github.com/users/onurcakal0');
+                const userData = await userRes.json();
+                
+                const reposRes = await fetch('https://api.github.com/users/onurcakal0/repos?per_page=100');
+                const reposData = await reposRes.json();
+                
+                let totalStars = 0;
+                if(Array.isArray(reposData)) {
+                    totalStars = reposData.reduce((acc, repo) => acc + repo.stargazers_count, 0);
+                }
+
+                document.getElementById('gh-repos').setAttribute('data-target', userData.public_repos || 0);
+                document.getElementById('gh-followers').setAttribute('data-target', userData.followers || 0);
+                document.getElementById('gh-stars').setAttribute('data-target', totalStars);
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateNumbers();
+                            observer.disconnect();
+                        }
+                    });
+                });
+                
+                const metricsSection = document.querySelector('.metrics-grid');
+                if(metricsSection) observer.observe(metricsSection);
+
+            } catch (error) {
+                console.error('GitHub API error:', error);
+            }
+        };
+
+        const animateNumbers = () => {
+            const counters = document.querySelectorAll('.metric-number');
+            const speed = 50; 
+
+            counters.forEach(counter => {
+                const animate = () => {
+                    const value = +counter.getAttribute('data-target');
+                    const data = +counter.innerText;
+                    
+                    const time = value / speed;
+                    if(data < value && value > 0) {
+                        counter.innerText = Math.ceil(data + time);
+                        setTimeout(animate, 30);
+                    } else {
+                        counter.innerText = value;
+                    }
+                }
+                animate();
+            });
+        };
+        
+        document.addEventListener('DOMContentLoaded', fetchGitHubStats);
     </script>
 </body>
 </html>
