@@ -95,16 +95,26 @@ h1, h2, h3, h4 {
 
 /* --- Cyber Glitch Effect --- */
 .cyber-glitch {
-    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     display: inline-block;
     transition: all 0.3s ease;
     cursor: default;
+    font-weight: bold;
 }
 
-.cyber-glitch:hover {
-    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.4));
+.gold-text {
+    background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.matrix-text {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cyber-glitch:hover .gold-text {
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
 }
 
 /* A subtle blue/purple gradient for special highlights */

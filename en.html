@@ -569,41 +569,46 @@
 
         // Cyber Glitch Decode Animation
         document.addEventListener('DOMContentLoaded', () => {
-            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
             const glitchElements = document.querySelectorAll('.cyber-glitch');
             
             glitchElements.forEach(el => {
                 let originalText = el.dataset.value;
                 if (!originalText) return;
                 
+                // Initialize as gold text
+                el.innerHTML = `<span class="gold-text">${originalText}</span>`;
+                
                 const playAnimation = () => {
                     let iteration = 0;
                     clearInterval(el.interval);
                     
                     el.interval = setInterval(() => {
-                        el.innerText = originalText
+                        const newHtml = originalText
                             .split("")
                             .map((letter, index) => {
                                 if(letter === " ") return " ";
                                 
                                 if(index < iteration) {
-                                    return originalText[index];
+                                    return `<span class="gold-text">${originalText[index]}</span>`;
                                 }
-                                return letters[Math.floor(Math.random() * 42)];
+                                const randomBinary = Math.random() > 0.5 ? "1" : "0";
+                                return `<span class="matrix-text">${randomBinary}</span>`;
                             })
                             .join("");
                         
+                        el.innerHTML = newHtml;
+                        
                         if(iteration >= originalText.length){ 
                             clearInterval(el.interval);
-                            el.innerText = originalText;
+                            el.innerHTML = `<span class="gold-text">${originalText}</span>`;
                         }
                         
-                        iteration += 1 / 3;
-                    }, 30);
+                        iteration += 1 / 2; // Speed up the cascade slightly
+                    }, 40);
                 };
                 
                 // Play on load
-                setTimeout(playAnimation, 300);
+                setTimeout(playAnimation, 500);
                 
                 // Play on hover
                 el.addEventListener('mouseover', playAnimation);
