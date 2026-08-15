@@ -162,20 +162,20 @@
                         <p class="about-text" style="margin-bottom: 40px;">Have a project? Or an idea about software engineering and modern web architectures? Let's connect.</p>
                     </div>
                     
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
                         <div class="input-group">
                             <label>NAME</label>
-                            <input type="text" placeholder="Your Name">
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="input-group">
                             <label>EMAIL</label>
-                            <input type="email" placeholder="example@mail.com">
+                            <input type="email" name="email" placeholder="example@mail.com" required>
                         </div>
                         <div class="input-group">
                             <label>MESSAGE</label>
-                            <textarea placeholder="Write your message here..."></textarea>
+                            <textarea name="message" placeholder="Write your message here..." required></textarea>
                         </div>
-                        <button type="button" class="btn-submit">Submit</button>
+                        <button type="submit" class="btn-submit">Send</button>
                     </form>
                 </div>
             </section>

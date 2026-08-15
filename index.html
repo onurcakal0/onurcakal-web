@@ -162,20 +162,20 @@
                         <p class="about-text" style="margin-bottom: 40px;">Projeniz mi var? Veya yazılım mühendisliği, modern web mimarileri üzerine bir fikriniz mi var? Bağlantı kuralım.</p>
                     </div>
                     
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
                         <div class="input-group">
                             <label>İSİM</label>
-                            <input type="text" placeholder="Adınız">
+                            <input type="text" name="name" placeholder="Adınız" required>
                         </div>
                         <div class="input-group">
                             <label>E-POSTA</label>
-                            <input type="email" placeholder="ornek@mail.com">
+                            <input type="email" name="email" placeholder="ornek@mail.com" required>
                         </div>
                         <div class="input-group">
                             <label>MESAJ</label>
-                            <textarea placeholder="Mesajınızı buraya yazın..."></textarea>
+                            <textarea name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
                         </div>
-                        <button type="button" class="btn-submit">Gönder</button>
+                        <button type="submit" class="btn-submit">Gönder</button>
                     </form>
                 </div>
             </section>
