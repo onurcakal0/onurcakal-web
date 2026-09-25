@@ -292,3 +292,48 @@ footer { padding: 2rem 5vw; border-top: 1px solid var(--border); color: var(--mu
 }
 
 
+
+/* HangiEasy Card Custom Hover Effect */
+.hangieasy-card {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    /* Optional: Make it span full width if it's the only project */
+    grid-column: 1 / -1; 
+}
+
+.hangieasy-card .card-bg-emojis {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 200%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 6rem;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    color: rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .hangieasy-card .card-bg-emojis {
+    color: rgba(255,255,255,0.05);
+}
+
+.hangieasy-card:hover .card-bg-emojis {
+    opacity: 0.15;
+    animation: scrollEmojis 15s linear infinite;
+}
+
+@keyframes scrollEmojis {
+    0% { transform: translate(0, -50%); }
+    100% { transform: translate(-50%, -50%); }
+}
+
+.hangieasy-card > * {
+    position: relative;
+    z-index: 2;
+}
