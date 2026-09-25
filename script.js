@@ -176,6 +176,7 @@ document.querySelectorAll(".open-modal-btn").forEach((button) => {
 
         totalSlides = mediaItems.length;
         previousButton.hidden = totalSlides < 2;
+        modalSlider.parentElement.style.display = totalSlides === 0 ? "none" : "block";
         nextButton.hidden = totalSlides < 2;
         updateSlider();
         modal.classList.add("active");
