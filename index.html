@@ -1,267 +1,222 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mustafa Onur Çakal'ın yazılım projeleri, ürün geliştirme yaklaşımı ve AI destekli çalışma süreci.">
+    <meta name="theme-color" content="#ffffff">
     <title>Mustafa Onur Çakal | Developer Designer Creator</title>
-    <link rel="stylesheet" href="style.css?v=10">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#ana-icerik">Ana içeriğe geç</a>
 
-    <div class="app-wrapper">
-        <div class="bg-mesh"></div>
-        
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            
-            <nav class="nav-links">
-                <a href="#iletisim" class="nav-item">İletişim</a>
-                <a href="#acik-kaynak" class="nav-item">Açık Kaynak</a>
-                <a href="#projeler" class="nav-item">Projeler</a>
-                <a href="#hakkimda" class="nav-item">Vizyon</a>
-                <a href="#hero" class="nav-item active">Giriş</a>
-            </nav>
-            
-            <div class="social-links">
-                <a href="https://linkedin.com/in/onurcakal" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/onurcakal0" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com/onurcakal0" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="en.html" style="font-size: 0.8rem; font-family: var(--font-mono); margin-top: 10px; color: var(--text-muted); text-decoration: none;">EN</a>
+    <nav class="navbar" aria-label="Ana menü">
+        <a class="logo" href="#hakkimda" aria-label="YılmazDev ana sayfa">Onur Çakal<span>.</span></a>
+        <button id="menu-toggle" class="menu-btn" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav-links">
+            <i class="ph ph-list" aria-hidden="true"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hakkimda" data-lang-key="nav_about">Hakkımda</a></li>
+            <li><a href="#projeler" data-lang-key="nav_projects">Projeler</a></li>
+            <li><a class="nav-services" href="/hizmetler" data-lang-key="nav_services">Hizmetler</a></li>
+            <li><a href="#ai-sureci" data-lang-key="nav_ai">AI ile Çalışma</a></li>
+            <li><a href="#egitimlerim" data-lang-key="nav_education">Eğitim</a></li>
+            <li><a href="#iletisim" data-lang-key="nav_contact">İletişim</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="lang-toggle" class="lang-btn" type="button" aria-label="Dili değiştir">EN</button>
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Koyu temaya geç">
+                <i class="ph ph-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="ana-icerik">
+        <section id="hakkimda" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow" data-lang-key="hero_eyebrow">Yazılım Mühendisliği Öğrencisi · Kurucu</p>
+                <h1 data-lang-key="hero_title">Merhaba, ben Onur.</h1>
+                <h2 data-lang-key="hero_subtitle">Geleceğin teknolojilerini kodluyorum.</h2>
+                <p data-lang-key="hero_desc">Geleneksel yöntemleri modern kodlama disiplinleriyle harmanlıyor, dijital dünyada kendi imparatorluğumu inşa ediyorum. Edu.X gibi vizyoner projelerin kurucusu olarak, sadece kod yazmıyor, devrim niteliğinde kullanıcı deneyimleri kurguluyorum.</p>
+                <div class="hero-actions">
+                    <a href="#projeler" class="btn-primary" data-lang-key="hero_btn_projects">Projelerimi Gör</a>
+                    <a href="#ai-sureci" class="btn-secondary" data-lang-key="hero_btn_ai">Nasıl Çalışıyorum?</a>
+                </div>
+                <ul class="hero-tags" aria-label="Odak alanları">
+                    <li>Web Applications</li>
+                    <li>Product Development</li>
+                    <li>AI-Assisted Development</li>
+                </ul>
             </div>
-        </aside>
+            <div class="hero-image">
+                <div class="image-ring" aria-hidden="true"></div>
+                <img src="profile.jpg" alt="Mustafa Onur Çakal profil fotoğrafı" width="520" height="520">
+            </div>
+        </section>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <a href="#iletisim" class="top-contact-btn">Bana Ulaşın</a>
+        <section class="services-banner" aria-labelledby="services-banner-title">
+            <div class="services-banner-copy">
+                <p class="eyebrow" data-lang-key="services_eyebrow">İşletmeler için</p>
+                <h2 id="services-banner-title" data-lang-key="services_title">İşletmeniz için web sitesi veya yönetim yazılımı mı arıyorsunuz?</h2>
+                <p data-lang-key="services_desc">Sabit fiyatlı web sitesi paketleri, sektöre özel çözümler ve firmaya özel yönetim yazılımı. Net kapsam, net teslim süresi, sürpriz maliyet yok.</p>
+            </div>
+            <a class="btn-primary services-banner-btn" href="/hizmetler">
+                <span data-lang-key="services_btn">Hizmetleri ve Fiyatları Gör</span>
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
+        </section>
 
-            <!-- Hero Section -->
-            <section id="hero" class="hero-section">
-                <div class="pre-title">I'M MUSTAFA ONUR ÇAKAL</div>
-                <h1 class="hero-title">
-                    <span>Software</span>
-                    <span>Engineer</span>
-                </h1>
-            </section>
+        <section id="projeler" class="section" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow" data-lang-key="projects_eyebrow">Seçilmiş çalışmalar</p>
+                    <h2 id="projects-title" class="section-title" data-lang-key="title_projects">Projeler</h2>
+                </div>
+                <p class="section-intro" data-lang-key="projects_intro">Her proje; ihtiyaç analizi, geliştirme süreci ve ortaya çıkan çözüm üzerinden sunulmuştur.</p>
+            </div>
 
-            <!-- Vizyon Section -->
-            <section id="hakkimda" class="section-wrapper">
-                <div class="section-title-container">
-                    <div class="section-title-outline">Vizyon</div>
-                    <div class="section-title-solid">Vizyon</div>
-                </div>
-                
-                <div class="two-col">
-                    <div class="about-text">
-                        <p>Geleceğin teknolojilerini kodlayan bir Yazılım Mühendisliği öğrencisiyim. Geleneksel yöntemleri modern kodlama disiplinleriyle harmanlıyor, dijital dünyada kendi imparatorluğumu inşa ediyorum.</p>
-                        <p>Edu.X gibi vizyoner projelerin kurucusu olarak, sadece kod yazmıyor, devrim niteliğinde kullanıcı deneyimleri kurguluyorum.</p>
+            <div class="projects-grid">
+                <article class="project-card featured-card">
+                    <div class="project-card-top">
+                        <span class="project-badge" data-lang-key="featured_badge">Öne Çıkan Proje</span>
+                        <i class="ph ph-chart-line-up project-icon" aria-hidden="true"></i>
                     </div>
-                    <div class="item-list">
-                        <div class="list-item">
-                            <span class="item-date">EĞİTİM | DEVAM EDİYOR</span>
-                            <h3 class="item-title">Yazılım Mühendisliği</h3>
-                            <p class="item-desc">Modern yazılım mimarileri, veri yapıları ve algoritmalar üzerine akademik çalışmalar.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    <h3 data-lang-key="project_salon_title">Güzellik Merkezi Yönetim Paneli</h3>
+                    <p data-lang-key="project_salon_summary">Randevu, müşteri, personel, satış ve işletme raporlarını tek noktada yöneten kapsamlı web uygulaması.</p>
+                    <ul class="project-tags" aria-label="Proje özellikleri">
+                        <li data-lang-key="tag_appointment">Randevu</li>
+                        <li data-lang-key="tag_cash">Kasa</li>
+                        <li data-lang-key="tag_reports">Raporlar</li>
+                        <li data-lang-key="tag_staff">Personel</li>
+                    </ul>
+                    <button class="open-modal-btn"
+                            type="button"
+                            data-title-tr="Güzellik Merkezi Yönetim Paneli"
+                            data-title-en="Beauty Center Management Dashboard"
+                            data-desc-tr="Bir güzellik merkezinin günlük operasyonlarını tek sistemde yönetebilmesi için geliştirilen web uygulaması. Randevu ve müşteri takibi, personel işlemleri, hizmet ve ürün satışları, tahsilat, kasa hareketleri, komisyonlar ve dönemsel raporlar aynı yapı içinde ele alındı. Rolüm; iş ihtiyaçlarını anlamak, kapsamı aşamalara ayırmak, kullanıcı akışlarını planlamak, AI destekli geliştirme sürecini yönetmek, testleri yürütmek ve sistemi yayına hazırlamaktı. Proje aktif geliştirme sürecindedir."
+                            data-desc-en="A web application developed to manage the daily operations of a beauty center in one place. Appointment and customer tracking, staff operations, service and product sales, collections, cash movements, commissions, and periodic reports are handled within the same system. My role included understanding business needs, dividing the scope into stages, planning user flows, managing the AI-assisted development process, testing, and preparing the system for release. The project is under active development."
+                            data-media="/portfolyo/icerik/salon-panel-preview.svg">
+                        <span data-lang-key="project_btn_text">Projeyi İncele</span>
+                        <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </article>
 
-            <!-- Projects Section -->
-            <section id="projeler" class="section-wrapper">
-                <div class="section-title-container">
-                    <div class="section-title-outline">Projeler</div>
-                    <div class="section-title-solid">Projeler</div>
-                </div>
-                
-                <div class="item-list">
-                    <div class="list-item">
-                        <span class="item-date">HAZ 2026 - GÜNCEL</span>
-                        <h3 class="item-title">HangiEasy.com</h3>
-                        <p class="item-desc">Tüm özellikleriyle tam sürüm HangiEasy.com'un küresel lansmanı yapıldı. Modern ve performanslı bir dijital ekosistem.</p>
-                        <div class="tags">
-                            <span>Web App</span>
-                            <span>Full Stack</span>
-                        </div>
-                    </div>
+                <article class="project-card">
+                    <div class="project-card-top"><span class="project-number">02</span><i class="ph ph-buildings project-icon" aria-hidden="true"></i></div>
+                    <h3 data-lang-key="project_1_title">Tekstil Firması Kurumsal Web Sitesi</h3>
+                    <p data-lang-key="project_1_summary">Bir tekstil firmasının ürünlerini ve kurumsal kimliğini dijital ortamda sunan responsive tanıtım sitesi.</p>
+                    <ul class="project-tags"><li>Responsive</li><li>SEO</li><li>UI Design</li></ul>
+                    <button class="open-modal-btn" type="button"
+                            data-title-tr="Tekstil Firması İçin Kurumsal Web Sitesi"
+                            data-title-en="Corporate Website for a Textile Company"
+                            data-desc-tr="Bir tekstil firmasının ürünlerini, ekibini ve iletişim kanallarını sade bir deneyimle sunmak için geliştirilen kurumsal web sitesi. Çalışmada responsive arayüz, ürün sunumu ve doğrudan iletişim akışlarına odaklandım. Projeyi planlama, tasarım, geliştirme ve yayına alma aşamalarını yürüttüm."
+                            data-desc-en="A corporate website developed to present a textile company's products, team, and contact channels through a clear experience. I focused on responsive interface design, product presentation, and direct contact flows, handling planning, design, development, and deployment."
+                            data-media="/portfolyo/icerik/gopp.jpg">
+                        <span data-lang-key="project_btn_text">Projeyi İncele</span><i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </article>
 
-                    <div class="list-item">
-                        <span class="item-date">DEVAM EDİYOR</span>
-                        <h3 class="item-title">Edu.X Core System</h3>
-                        <p class="item-desc">Geleneksel eğitim kalıplarını yıkan, hızlı ve güvenilir, tamamen kullanıcı odaklı yeni nesil eğitim ekosistemi. Faz 3 Backend Entegrasyonu devam ediyor (%65).</p>
-                        <div class="tags">
-                            <span>EdTech</span>
-                            <span>SaaS</span>
-                            <span>Beta</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                <article class="project-card">
+                    <div class="project-card-top"><span class="project-number">03</span><i class="ph ph-truck project-icon" aria-hidden="true"></i></div>
+                    <h3 data-lang-key="project_2_title">Oto Çekici Demo Web Sitesi</h3>
+                    <p data-lang-key="project_2_summary">Yerel hizmet işletmeleri için hızlı iletişim ve mobil kullanımı öne çıkaran konsept çalışma.</p>
+                    <ul class="project-tags"><li>Mobile First</li><li>SEO</li><li>Demo</li></ul>
+                    <button class="open-modal-btn" type="button"
+                            data-title-tr="SEO Uyumlu Oto Çekici Demo Web Sitesi"
+                            data-title-en="SEO-Friendly Towing Service Demo Website"
+                            data-desc-tr="Yerel bir oto çekici işletmesinin hizmetlerini mobil cihazlarda hızlı ve anlaşılır biçimde sunması için hazırladığım konsept çalışması. Tek sayfa yapısı, belirgin iletişim çağrıları, mobil uyumluluk ve temel arama motoru görünürlüğü üzerine çalıştım. Bu çalışma gerçek müşteri projesi değil, demo amaçlıdır."
+                            data-desc-en="A concept project designed to present a local towing service clearly and quickly on mobile devices. I worked on a single-page structure, prominent contact calls, responsive behavior, and basic search visibility. This is a demo rather than a client project."
+                            data-media="/portfolyo/icerik/cekici_1.png,/portfolyo/icerik/cekici_2.png,/portfolyo/icerik/cekici_vid.mp4">
+                        <span data-lang-key="project_btn_text">Projeyi İncele</span><i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </article>
 
-            <!-- Open Source Section -->
-            <section id="acik-kaynak" class="section-wrapper">
-                <div class="section-title-container">
-                    <div class="section-title-outline">Açık Kaynak</div>
-                    <div class="section-title-solid">Açık Kaynak</div>
-                </div>
-                
-                <div class="item-list">
-                    <a href="https://github.com/onurcakal0/yt-ai-videosfactory" target="_blank" class="list-item" style="text-decoration: none; display: block;">
-                        <span class="item-date">GİTHUB REPOSITORY</span>
-                        <h3 class="item-title">yt-ai-videosfactory</h3>
-                        <p class="item-desc">Yapay zeka kullanarak tamamen otomatikleştirilmiş YouTube videoları üreten Python kütüphanesi. Süreçlerin baştan uca otomasyonu.</p>
-                        <div class="tags">
-                            <span>Python</span>
-                            <span>AI</span>
-                            <span>Automation</span>
-                        </div>
-                    </a>
+                <article class="project-card">
+                    <div class="project-card-top"><span class="project-number">04</span><i class="ph ph-student project-icon" aria-hidden="true"></i></div>
+                    <h3 data-lang-key="project_3_title">Öğrenci Not Paylaşım Platformu</h3>
+                    <p data-lang-key="project_3_summary">Öğrencilerin ders kaynaklarını yükleyip filtreleyerek paylaşabildiği işlevsel platform denemesi.</p>
+                    <ul class="project-tags"><li>File Upload</li><li>Filtering</li><li>EdTech</li></ul>
+                    <button class="open-modal-btn" type="button"
+                            data-title-tr="Öğrenciler İçin Not Paylaşım Platformu"
+                            data-title-en="Note-Sharing Platform for Students"
+                            data-desc-tr="Öğrencilerin ders kaynaklarını PDF olarak yükleyebildiği, derslere göre filtreleyebildiği ve ortak bir havuzda paylaşabildiği platform denemesi. Bu projede form akışları, dosya yükleme deneyimi, içerik filtreleme ve sade arayüz üzerine çalıştım."
+                            data-desc-en="A platform prototype where students can upload PDF resources, filter them by course, and share them in a common pool. I worked on form flows, file-upload experience, content filtering, and a clear interface."
+                            data-media="/portfolyo/icerik/not1.png,/portfolyo/icerik/notVideo.mp4">
+                        <span data-lang-key="project_btn_text">Projeyi İncele</span><i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </article>
+            </div>
+        </section>
 
-                    <div class="list-item">
-                        <span class="item-date">GİTHUB KÜTÜPHANESİ</span>
-                        <h3 class="item-title">Operasyon Günlüğü</h3>
-                        <p class="item-desc">Açık kaynak dünyasına aktif katkılarım. Depo (Repository) Güncellemeleri, Commit akışları ve sistem logları.</p>
-                    </div>
-                </div>
-            </section>
+        <section id="ai-sureci" class="section ai-section" aria-labelledby="ai-title">
+            <div class="ai-intro">
+                <p class="eyebrow" data-lang-key="ai_eyebrow">Şeffaf çalışma yaklaşımı</p>
+                <h2 id="ai-title" class="section-title" data-lang-key="ai_title">Yapay zekâyı nasıl kullanıyorum?</h2>
+                <p data-lang-key="ai_desc_1">Yapay zekâyı yalnızca kod üretmek için değil; iş problemini anlamak, gereksinimleri çıkarmak, geliştirme aşamalarını planlamak, hata nedenlerini araştırmak, test senaryoları hazırlamak ve dokümantasyon oluşturmak için kullanıyorum.</p>
+                <p data-lang-key="ai_desc_2">Projeleri tek komutla oluşturmaya çalışmak yerine küçük ve doğrulanabilir aşamalara ayırıyorum. Ürün kararları, testlerin yürütülmesi ve ortaya çıkan sonucun sorumluluğu bana ait.</p>
+            </div>
+            <ol class="process-grid">
+                <li><span>01</span><div><h3 data-lang-key="step_1_title">İhtiyacı anlama</h3><p data-lang-key="step_1_desc">Problemi, kullanıcıyı ve başarı ölçütünü netleştirme.</p></div></li>
+                <li><span>02</span><div><h3 data-lang-key="step_2_title">Kapsam ve plan</h3><p data-lang-key="step_2_desc">Özellikleri, sınırları ve geliştirme sırasını belirleme.</p></div></li>
+                <li><span>03</span><div><h3 data-lang-key="step_3_title">Aşamalı geliştirme</h3><p data-lang-key="step_3_desc">Her özelliği küçük, takip edilebilir adımlarla uygulama.</p></div></li>
+                <li><span>04</span><div><h3 data-lang-key="step_4_title">Kontrol ve test</h3><p data-lang-key="step_4_desc">Normal kullanımın yanında hatalı ve uç durumları deneme.</p></div></li>
+                <li><span>05</span><div><h3 data-lang-key="step_5_title">İyileştirme</h3><p data-lang-key="step_5_desc">Geri bildirimlere göre hataları ve kullanıcı deneyimini düzeltme.</p></div></li>
+                <li><span>06</span><div><h3 data-lang-key="step_6_title">Yayına hazırlık</h3><p data-lang-key="step_6_desc">Son kontroller, dokümantasyon ve güvenli teslim.</p></div></li>
+            </ol>
+            <div class="ai-note">
+                <i class="ph ph-check-circle" aria-hidden="true"></i>
+                <p data-lang-key="ai_note">AI geliştirme hızımı artıran bir araçtır; ortaya çıkan işi anlamak, kontrol etmek ve sorumluluğunu almak çalışma biçimimin temelidir.</p>
+            </div>
+        </section>
 
-            <!-- System Metrics Section -->
-            <section id="metrics" class="section-wrapper">
-                <div class="section-title-container">
-                    <div class="section-title-outline">Metrikler</div>
-                    <div class="section-title-solid">Metrikler</div>
-                </div>
-                
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <i class="fab fa-github metric-icon"></i>
-                        <h2 class="metric-number" data-target="0" id="gh-repos">0</h2>
-                        <span class="metric-label">Repositories</span>
-                    </div>
-                    <div class="metric-card">
-                        <i class="fas fa-users metric-icon"></i>
-                        <h2 class="metric-number" data-target="0" id="gh-followers">0</h2>
-                        <span class="metric-label">Followers</span>
-                    </div>
-                    <div class="metric-card">
-                        <i class="fas fa-star metric-icon"></i>
-                        <h2 class="metric-number" data-target="0" id="gh-stars">0</h2>
-                        <span class="metric-label">Stars Earned</span>
-                    </div>
-                </div>
-            </section>
+        <section id="egitimlerim" class="section" aria-labelledby="education-title">
+            <div class="section-heading">
+                <div><p class="eyebrow" data-lang-key="education_eyebrow">Öğrenme sürecim</p><h2 id="education-title" class="section-title" data-lang-key="title_education">Eğitim</h2></div>
+            </div>
+            <div class="education-grid">
+                <article class="education-card"><i class="ph ph-graduation-cap" aria-hidden="true"></i><div><h3 data-lang-key="edu_1_title">Doğuş Üniversitesi · Yazılım Mühendisliği</h3><p data-lang-key="edu_1_status">Lisans eğitimi · Devam ediyor</p></div></article>
+                <article class="education-card"><i class="ph ph-certificate" aria-hidden="true"></i><div><h3 data-lang-key="edu_2_title">BTK Akademi · HTML, CSS ve JavaScript</h3><p data-lang-key="edu_2_status">İleri düzey eğitim · Tamamlandı</p></div></article>
+                <article class="education-card"><i class="ph ph-code" aria-hidden="true"></i><div><h3 data-lang-key="edu_3_title">C# Programlama</h3><p data-lang-key="edu_3_status">İleri düzey çalışma · Devam ediyor</p></div></article>
+                <article class="education-card"><i class="ph ph-terminal-window" aria-hidden="true"></i><div><h3 data-lang-key="edu_4_title">42 İstanbul · Havuz Eğitimi</h3><p data-lang-key="edu_4_status">Yoğunlaştırılmış program · 2026</p></div></article>
+            </div>
+        </section>
 
-            <!-- Contact Section -->
-            <section id="iletisim" class="section-wrapper">
-                <div class="section-title-container">
-                    <div class="section-title-outline">İletişim</div>
-                    <div class="section-title-solid">İletişim</div>
-                </div>
-                
-                <div class="two-col">
-                    <div class="contact-text">
-                        <p class="about-text" style="margin-bottom: 40px;">Projeniz mi var? Veya yazılım mühendisliği, modern web mimarileri üzerine bir fikriniz mi var? Bağlantı kuralım.</p>
-                    </div>
-                    
-                    <form class="contact-form" action="https://formspree.io/f/mppajqnb" method="POST">
-                        <div class="input-group">
-                            <label>İSİM</label>
-                            <input type="text" name="name" placeholder="Adınız" required>
-                        </div>
-                        <div class="input-group">
-                            <label>E-POSTA</label>
-                            <input type="email" name="email" placeholder="ornek@mail.com" required>
-                        </div>
-                        <div class="input-group">
-                            <label>MESAJ</label>
-                            <textarea name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Gönder</button>
-                    </form>
-                </div>
-            </section>
-            
-        </main>
+        <section id="iletisim" class="section contact-section" aria-labelledby="contact-title">
+            <div>
+                <p class="eyebrow" data-lang-key="contact_eyebrow">İletişim</p>
+                <h2 id="contact-title" class="section-title" data-lang-key="contact_title">Bir proje veya fikir üzerine konuşalım.</h2>
+                <p data-lang-key="contact_desc">Projelerim, çalışma yöntemim veya freelance işler hakkında benimle aşağıdaki kanallardan iletişime geçebilirsiniz.</p>
+            </div>
+            <div class="contact-links">
+                <a href="https://linkedin.com/in/onurcakal" target="_blank" rel="noopener noreferrer"><i class="ph ph-linkedin-logo" aria-hidden="true"></i><span>LinkedIn</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+                <a href="https://github.com/onurcakal0" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo" aria-hidden="true"></i><span>GitHub</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/onurcakal9" target="_blank" rel="noopener noreferrer"><i class="ph ph-instagram-logo" aria-hidden="true"></i><span>Instagram</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>© <span id="current-year"></span> Mustafa Onur Çakal · <span data-lang-key="footer_text">Öğreniyor, geliştiriyor ve üretiyorum.</span></p></footer>
+
+    <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" aria-hidden="true">
+        <div class="modal-content" tabindex="-1">
+            <button class="close-modal" type="button" aria-label="Proje penceresini kapat"><i class="ph ph-x" aria-hidden="true"></i></button>
+            <div class="modal-slider-container">
+                <div class="modal-slider" id="modal-slider"></div>
+                <button class="slider-nav prev" type="button" aria-label="Önceki görsel"><i class="ph ph-caret-left" aria-hidden="true"></i></button>
+                <button class="slider-nav next" type="button" aria-label="Sonraki görsel"><i class="ph ph-caret-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="modal-copy"><p class="eyebrow" data-lang-key="modal_eyebrow">Proje özeti</p><h3 id="modal-title"></h3><p id="modal-desc"></p></div>
+        </div>
     </div>
 
-    <script>
-        const sections = document.querySelectorAll('section');
-        const navItems = document.querySelectorAll('.nav-item');
-        const mainContent = document.querySelector('.main-content');
-
-        mainContent.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (mainContent.scrollTop >= sectionTop - 150) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('href').includes(current)) {
-                    item.classList.add('active');
-                }
-            });
-        });
-
-        // GitHub Stats Fetch & Animate
-        const fetchGitHubStats = async () => {
-            try {
-                const userRes = await fetch('https://api.github.com/users/onurcakal0');
-                const userData = await userRes.json();
-                
-                const reposRes = await fetch('https://api.github.com/users/onurcakal0/repos?per_page=100');
-                const reposData = await reposRes.json();
-                
-                let totalStars = 0;
-                if(Array.isArray(reposData)) {
-                    totalStars = reposData.reduce((acc, repo) => acc + repo.stargazers_count, 0);
-                }
-
-                document.getElementById('gh-repos').setAttribute('data-target', userData.public_repos || 0);
-                document.getElementById('gh-followers').setAttribute('data-target', userData.followers || 0);
-                document.getElementById('gh-stars').setAttribute('data-target', totalStars);
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            animateNumbers();
-                            observer.disconnect();
-                        }
-                    });
-                });
-                
-                const metricsSection = document.querySelector('.metrics-grid');
-                if(metricsSection) observer.observe(metricsSection);
-
-            } catch (error) {
-                console.error('GitHub API error:', error);
-            }
-        };
-
-        const animateNumbers = () => {
-            const counters = document.querySelectorAll('.metric-number');
-            const speed = 50; 
-
-            counters.forEach(counter => {
-                const animate = () => {
-                    const value = +counter.getAttribute('data-target');
-                    const data = +counter.innerText;
-                    
-                    const time = value / speed;
-                    if(data < value && value > 0) {
-                        counter.innerText = Math.ceil(data + time);
-                        setTimeout(animate, 30);
-                    } else {
-                        counter.innerText = value;
-                    }
-                }
-                animate();
-            });
-        };
-        
-        document.addEventListener('DOMContentLoaded', fetchGitHubStats);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
