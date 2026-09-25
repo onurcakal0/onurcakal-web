@@ -324,7 +324,7 @@ footer { padding: 2rem 5vw; border-top: 1px solid var(--border); color: var(--mu
 }
 
 .hangieasy-card:hover .card-bg-emojis {
-    opacity: 0.15;
+    opacity: 0.45;
     animation: scrollEmojis 15s linear infinite;
 }
 
@@ -336,4 +336,28 @@ footer { padding: 2rem 5vw; border-top: 1px solid var(--border); color: var(--mu
 .hangieasy-card > * {
     position: relative;
     z-index: 2;
+}
+
+.legendary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    background: linear-gradient(135deg, #ff007a, #7a00ff);
+    color: #ffffff !important;
+    font-weight: 800;
+    font-size: 1.05rem;
+    border-radius: 999px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(255, 0, 122, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.legendary-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(122, 0, 255, 0.6);
+    color: #ffffff !important;
 }

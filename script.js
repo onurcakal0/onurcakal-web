@@ -148,7 +148,7 @@ document.querySelectorAll(".open-modal-btn").forEach((button) => {
     button.addEventListener("click", () => {
         lastFocusedElement = button;
         modalTitle.textContent = button.dataset[`title${currentLang === "tr" ? "Tr" : "En"}`];
-        modalDesc.textContent = button.dataset[`desc${currentLang === "tr" ? "Tr" : "En"}`];
+        modalDesc.innerHTML = button.dataset[`desc${currentLang === "tr" ? "Tr" : "En"}`];
         modalSlider.replaceChildren();
         currentSlide = 0;
         const mediaItems = button.dataset.media.split(",").map((item) => item.trim()).filter(Boolean);
