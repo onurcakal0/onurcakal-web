@@ -142,7 +142,7 @@ main { width: min(1180px, 90vw); margin: 0 auto; padding-top: 76px; }
     margin-left: auto; 
     border-radius: 50%; 
     object-fit: cover; 
-    object-position: 50% 38%; 
+    object-position: 50% 50%; 
     animation: softRedGlow 3s ease-in-out infinite; 
 }
 
