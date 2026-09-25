@@ -135,8 +135,27 @@ main { width: min(1180px, 90vw); margin: 0 auto; padding-top: 76px; }
 .hero-tags { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 2rem; list-style: none; }
 .hero-tags li, .project-tags li { padding: .4rem .7rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: .74rem; font-weight: 600; }
 .hero-image { position: relative; isolation: isolate; }
-.hero-image img { width: min(100%, 430px); aspect-ratio: 1; margin-left: auto; border: 8px solid var(--surface); border-radius: 34% 66% 58% 42% / 43% 39% 61% 57%; box-shadow: var(--shadow); object-fit: cover; object-position: 50% 38%; }
-.image-ring { position: absolute; inset: -7% -8% 8% 12%; z-index: -1; border: 1px solid var(--primary); border-radius: 59% 41% 34% 66% / 54% 62% 38% 46%; opacity: .35; }
+.hero-image img { 
+    width: min(100%, 430px); 
+    aspect-ratio: 1; 
+    margin-left: auto; 
+    border: 5px solid #ff0000; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: 50% 38%; 
+    animation: rgbGlow 3s linear infinite; 
+}
+
+@keyframes rgbGlow {
+    0% { border-color: #ff0000; box-shadow: 0 0 20px #ff0000; }
+    15% { border-color: #ff00ff; box-shadow: 0 0 20px #ff00ff; }
+    33% { border-color: #0000ff; box-shadow: 0 0 20px #0000ff; }
+    49% { border-color: #00ffff; box-shadow: 0 0 20px #00ffff; }
+    67% { border-color: #00ff00; box-shadow: 0 0 20px #00ff00; }
+    84% { border-color: #ffff00; box-shadow: 0 0 20px #ffff00; }
+    100% { border-color: #ff0000; box-shadow: 0 0 20px #ff0000; }
+}
+.image-ring { display: none; }
 
 /* Hero ile projeler arasındaki hizmet sitesi tanıtım bandı. */
 .services-banner {
