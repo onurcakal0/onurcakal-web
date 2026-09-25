@@ -472,3 +472,27 @@ footer { padding: 2rem 5vw; border-top: 1px solid var(--border); color: var(--mu
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
+
+/* Efsanevi Tasarım Yaklaşımı */
+#calisma-yaklasimi .process-grid li {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.05), rgba(15, 23, 42, 0.01));
+    border: 1px solid rgba(220, 38, 38, 0.15);
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] #calisma-yaklasimi .process-grid li {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.2));
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+#calisma-yaklasimi .process-grid li:hover {
+    transform: translateX(10px);
+    border-color: rgba(239, 68, 68, 0.8);
+    box-shadow: -5px 5px 20px rgba(239, 68, 68, 0.2);
+}
+
+#calisma-yaklasimi .process-grid li > span {
+    background: linear-gradient(135deg, #ff007a, #dc2626);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.4);
+}
